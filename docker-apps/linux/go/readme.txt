@@ -14,7 +14,7 @@ docker ps
 
 docker stop go
 
-#login to DockerHub using password: Qwerty===1
+#login to DockerHub using password: <password>
 docker login --username sixdegreesuk
 
 # push the image to docker hub

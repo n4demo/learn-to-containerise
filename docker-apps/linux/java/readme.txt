@@ -8,7 +8,7 @@ docker image build -t sixdegreesuk/java-my-name-here .
 # run the local image in a container hosted in a Linux VM hosted on your laptop
 docker run -it --rm  --name java-hw sixdegreesuk/java-my-name-here
 
-#login to DockerHub using password: Qwerty===1
+#login to DockerHub using password: <password>
 docker login --username sixdegreesuk
 
 # push the image to docker hub

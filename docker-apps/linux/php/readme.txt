@@ -21,7 +21,7 @@ docker run -it --rm  --name php-app -p 5002:80 sixdegreesuk/php-app:liverpool
 http://localhost:5002
 
 #login to docker hub
-#login to DockerHub using password: Qwerty===1
+#login to DockerHub using password: <password>
 docker login --username sixdegreesuk
 
 # push the image to docker hub

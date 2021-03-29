@@ -14,7 +14,7 @@ docker run -it --rm  --name nodejs -p 5013:8080 sixdegreesuk/nodejs
 http://localhost:5013
 
 #login to docker hub
-#login to DockerHub using password: Qwerty===1
+#login to DockerHub using password: <password>
 docker login --username sixdegreesuk
 
 # push the image to docker hub

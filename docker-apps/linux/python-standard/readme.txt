@@ -34,7 +34,7 @@ docker container ls -aq
 
 # ============== PART 2 -- push image to Docker Hub =========================
 
-#login to DockerHub using password: Qwerty===1
+#login to DockerHub using password: <password>
 docker login --username sixdegreesuk
 
 # push the image to DockerHub - make sure you have built this image with the tag specified below

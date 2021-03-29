@@ -16,13 +16,13 @@ docker ps -a
 # see if the container is still running or not
 docker stop ubuntu-container 
 
-#login to DockerHub using password: Qwerty===1
+#login to DockerHub using password: <password>
 docker login --username sixdegreesuk
 
 # push the image to docker hub
 docker push sixdegreesuk/ubuntu-test:my-name-here
 
-# now view in DockerHub in browser by signing in as: sixdegreesuk  password: Qwerty===1
+# now view in DockerHub in browser by signing in as: sixdegreesuk  password: <password>
 https://hub.docker.com
 
 # drill into app to see the tags

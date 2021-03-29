@@ -15,7 +15,7 @@ docker run -it --rm  --name static -p 5012:80 sixdegreesuk/static
 # run in browser
 http://localhost:5012
 
-#login to DockerHub using password: Qwerty===1
+#login to DockerHub using password: <password>
 docker login --username sixdegreesuk
 
 # push the image to docker hub

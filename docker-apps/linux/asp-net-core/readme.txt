@@ -17,7 +17,7 @@ http://localhost:5014
 
 docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" sixdegreesuk/aspnetapp:v3
 
-#login to DockerHub using password: Qwerty===1
+#login to DockerHub using password: <password>
 docker login --username sixdegreesuk
 
 # push the image to docker hub

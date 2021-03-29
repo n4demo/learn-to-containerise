@@ -20,13 +20,13 @@ docker ps -a
 ## show logs for this container - why did it fail?
 docker logs -f sixdegreesuk/python-basic:my-name-here
 
-#login to DockerHub using password: Qwerty===1
+#login to DockerHub using password: <password>
 docker login --username sixdegreesuk
 
 # push the image to docker hub
 docker push sixdegreesuk/python-basic:my-name-here
 
-# now view in DockerHub in browser by signing in as: sixdegreesuk  password: Qwerty===1
+# now view in DockerHub in browser by signing in as: sixdegreesuk  password: <password>
 https://hub.docker.com
 
 # drill into app to see the tags
