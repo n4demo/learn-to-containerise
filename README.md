@@ -3,14 +3,14 @@
 ## Prerequisites
 
 * Gain admin rights to your laptop
-* Download and install GIT on your laptop  
+* Download and install GIT onto your laptop  
 * Download and install VS Code onto your laptop  
 * Download and install Docker Desktop onto your laptop  
 * Double click on fve.reg to allow you to switch between running Linux and Windows containers
 
 A possible rebot may be beneficial.  
 
-## check your Prerequisites
+## Check your Prerequisites
 run a command prompt as admin and type:
 
 * git version  
@@ -19,14 +19,14 @@ run a command prompt as admin and type:
 
 A possible rebot may be beneficial. 
 
-## clone code to local machine
-* create a new folder c:\
+## Clone repo code to laptop folder 
+* create a new folder c:\docker
 * using Windows explorer navigate to this folder a right click for a Bash Git command
 git clone https://github.com/sixdegreesuk/docker-root or
 git pull origin master
 
-## Optional to save time in lab
-To download base images (on wifi) to speed things up in Docker, open a terminal in VS Code or command prompt and run:
+## (Optional) to save download time in lab
+To download base images (on wifi) to speed things up when building Docker images, open a terminal in VS Code or command prompt and run:
 * docker pull ubuntu  
 * docker pull python  
 * docker pull python:3.6  
@@ -36,7 +36,7 @@ To download base images (on wifi) to speed things up in Docker, open a terminal 
 * docker pull mcr.microsoft.com/dotnet/core/sdk:3.0  
 * docker pull microsoft/aspnet:4.7.2-windowsservercore-1803  
 
-## to start lab
+## Start lab
 * In VS code open and set folder to Ubuntu
 * follow the Readme for instructions
 
