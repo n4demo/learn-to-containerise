@@ -1,5 +1,4 @@
-# Putting Applications into container images
-
+# Migrating web applications into Docker images
 
 ## Prerequisites
 
