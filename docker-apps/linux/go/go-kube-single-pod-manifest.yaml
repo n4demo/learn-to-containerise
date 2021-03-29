@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: go
+spec:
+  containers:
+  - name: go
+    image: cdwuk/go:latest
+    imagePullPolicy: Always
+

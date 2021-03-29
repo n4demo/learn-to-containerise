@@ -1,0 +1,51 @@
+# name: php-kube-manifest.yaml
+# description: deploys application into sandbox namespace and exposes via a Kubernetes service
+# author: Nigel Wardle
+# created: 05/11/19
+# modified 05/11/19 
+# *******************************************
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php
+  labels:
+    app: php
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: php
+  template:
+    metadata:
+      labels:
+        app: php
+    spec:
+      containers:
+      - name: php
+        image: cdwuk/php-app:latest
+        imagePullPolicy: Always
+#        resources: 
+#         requests:
+#          memory: "2000Mi"
+#          cpu: "2000m"
+#         limits:
+#          memory: "2500Mi"
+#          cpu: "2500m"
+        ports:
+        - containerPort: 80
+---
+# expose pods to service on public IP
+apiVersion: v1
+kind: Service
+metadata:
+  name: php
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "false" # set to true for public IP
+    # service.beta.kubernetes.io/azure-load-balancer-internal-subnet: "apps-subnet" # specify subnet
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: php

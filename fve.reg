@@ -1,0 +1,3 @@
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Policies\Microsoft\FVE]
+"FDVDenyWriteAccess"=dword:00000000

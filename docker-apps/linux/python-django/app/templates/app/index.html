@@ -1,0 +1,23 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+ <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">         
+          <a class="navbar-brand" href="#">Azure App Service</a>		 
+        </div>            
+      </div>
+    </nav> 
+
+{% load static %}
+<div class="jumbotron" style="background-image: url('{% static "app/img/STB13_Ken_06.png" %}');">
+
+<div class="container">
+    <h1 class="text-center v-center" style="padding-bottom:20px;">A CDW Custom Python App running in Docker</h1>
+</div>
+<div>
+    <img src="/static/app/img/cdw.png"> 
+</div>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: php
+spec:
+  containers:
+  - name: php
+    image: cdwuk/php-app:latest
+    imagePullPolicy: Always
+

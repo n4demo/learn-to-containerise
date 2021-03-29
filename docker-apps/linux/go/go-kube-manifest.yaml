@@ -1,0 +1,45 @@
+# name: go-kube-manifest.yaml
+# description: deploys application into sandbox namespace and exposes on an Azure internal load balancer
+# author: Nigel Wardle
+# created: 05/11/19
+# modified 05/11/19 
+# *******************************************
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-backend
+  labels:
+    app: go
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: go
+  template:
+    metadata:
+      labels:
+        app: go
+    spec:
+      containers:
+      - name: go
+        image: cdwuk/go:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+---
+# expose pods to service on public IP
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-backend
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "false" # set to true for public IP
+    # service.beta.kubernetes.io/azure-load-balancer-internal-subnet: "apps-subnet" # specify subnet
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: go
+  #sessionAffinity: ClientIP

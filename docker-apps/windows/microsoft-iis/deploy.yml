@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iis-deployment
+  labels:
+    app: iis
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: iis
+  template:
+    metadata:
+      labels:
+        app: iis
+    spec:
+      containers:
+      - name: iis
+        image: cdwuk/iis:v1.0.0
+        ports:
+        - containerPort: 80
