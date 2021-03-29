@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: nodejs
-        image: cdwuk/nodejs
+        image: sixdegreesuk/nodejs
         imagePullPolicy: Always
         ports:
         - containerPort: 8080

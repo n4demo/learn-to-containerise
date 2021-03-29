@@ -3,13 +3,13 @@
 # ** Important - VS code folder on LHS must be set to JAVA and set your name in the image below!!! ******************
 
 # create the local image which is stored on your laptop 
-docker image build -t cdwuk/java-my-name-here .
+docker image build -t sixdegreesuk/java-my-name-here .
 
 # run the local image in a container hosted in a Linux VM hosted on your laptop
-docker run -it --rm  --name java-hw cdwuk/java-my-name-here
+docker run -it --rm  --name java-hw sixdegreesuk/java-my-name-here
 
 #login to DockerHub using password: Qwerty===1
-docker login --username cdwuk
+docker login --username sixdegreesuk
 
 # push the image to docker hub
-docker push cdwuk/java-my-name-here
+docker push sixdegreesuk/java-my-name-here

@@ -4,9 +4,9 @@
 
 
 # open a new terminal and paste
-docker image build -t cdwuk/webforms:my-name-here -f ./webformsbasic/Dockerfile . 
+docker image build -t sixdegreesuk/webforms:my-name-here -f ./webformsbasic/Dockerfile . 
 
-docker run -it --rm -p 5014:80 --name aspnetapp cdwuk/webforms:my-name-here
+docker run -it --rm -p 5014:80 --name aspnetapp sixdegreesuk/webforms:my-name-here
 
 docker stop aspnetapp
 
@@ -15,11 +15,11 @@ docker ps
 # run in browser
 http://localhost:5014
 
-docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" cdwuk/aspnetapp:v3
+docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" sixdegreesuk/aspnetapp:v3
 
 #login to docker hub
-docker login --username cdwuk
+docker login --username sixdegreesuk
 
 # push the image to docker hub
-docker push cdwuk/aspnetapp:v3
+docker push sixdegreesuk/aspnetapp:v3
 

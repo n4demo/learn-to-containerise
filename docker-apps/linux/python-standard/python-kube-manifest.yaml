@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: python
-        image: cdwuk/python-standard:v1.0.0
+        image: sixdegreesuk/python-standard:v1.0.0
         imagePullPolicy: Always
         resources: 
 #          requests:

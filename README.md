@@ -28,7 +28,7 @@ A possible rebot may be beneficial.
 create a new folder c:\
 
 using Windows explorer navigate to this folder a right click for a Bash Git command
-git clone https://github.com/cdwuk/docker-root or
+git clone https://github.com/sixdegreesuk/docker-root or
 git pull origin master
 
 to download base images (on wifi) to speed things up in Docker, open a terminal in VS Code or command prompt and run:

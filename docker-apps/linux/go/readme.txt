@@ -1,8 +1,8 @@
 # create the local image
-docker image build -t cdwuk/go:latest .
+docker image build -t sixdegreesuk/go:latest .
 
 # run the local image
-docker container run --name go --rm -i -t -p 8081:80 cdwuk/go:latest
+docker container run --name go --rm -i -t -p 8081:80 sixdegreesuk/go:latest
 
 # run in cli
 curl localhost:8081
@@ -15,10 +15,10 @@ docker ps
 docker stop go
 
 #login to DockerHub using password: Qwerty===1
-docker login --username cdwuk
+docker login --username sixdegreesuk
 
 # push the image to docker hub
-docker push cdwuk/go:latest
+docker push sixdegreesuk/go:latest
 
 #login to azure container registry
 docker login <myregistry>.azurecr.io

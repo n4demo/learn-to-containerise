@@ -7,11 +7,11 @@
 
 dotnet publish -c Release
 
-# docker image build -t cdwuk/webforms:my-name-here -f ./aspnetapp/Dockerfile . 
+# docker image build -t sixdegreesuk/webforms:my-name-here -f ./aspnetapp/Dockerfile . 
 
-docker image build -t cdwuk/webforms:my-name-here . 
+docker image build -t sixdegreesuk/webforms:my-name-here . 
 
-docker run -it --rm -p 5014:80 --name aspnetapp cdwuk/aspnetapp:v3
+docker run -it --rm -p 5014:80 --name aspnetapp sixdegreesuk/aspnetapp:v3
 
 docker stop aspnetapp
 
@@ -20,11 +20,11 @@ docker ps
 # run in browser
 http://localhost:5014
 
-docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" cdwuk/aspnetapp:v3
+docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" sixdegreesuk/aspnetapp:v3
 
 #login to docker hub
-docker login --username cdwuk
+docker login --username sixdegreesuk
 
 # push the image to docker hub
-docker push cdwuk/aspnetapp:v3
+docker push sixdegreesuk/aspnetapp:v3
 
