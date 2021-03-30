@@ -6,7 +6,8 @@
 docker image build -t sixdegreesuk/ubuntu-test:my-name-here .
 
 # run the local image in a container hosted in a Linux VM hosted on your laptop
-docker container run --name ubuntu-container --rm -i -t sixdegreesuk/ubuntu-test:my-name-here
+
+docker container run --env NAME=my-name-here --name ubuntu-container --rm -i -t sixdegreesuk/ubuntu-test:my-name-here 
 
 # have a look at the Dockerfile on LHS and try and understand what it is doing
 
