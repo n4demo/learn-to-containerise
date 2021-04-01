@@ -1,4 +1,4 @@
-# This exercise shows how to containerise a very simple bit of code that runs in Ubuntu Linux. 
+# This first exercise shows how to containerise a very simple bit of code that runs in Ubuntu Linux. 
 
 # ** Important - VS code folder on LHS must be set to UBUNTU and set your name in the image below!!! ******************
 
