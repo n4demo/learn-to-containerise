@@ -12,7 +12,7 @@
 docker image build -t sixdegreesuk/php-app:my-name-here .
 
 # add additional tags to the same image by rebuilding image
-docker build -t sixdegreesuk/php-app -t sixdegreesuk/php-app:liverpool -t sixdegreesuk/php-app:latest .
+docker build -t sixdegreesuk/php-app -t sixdegreesuk/php-app:liverpool -t sixdegreesuk/php-app:latest -t acrprduks.azurecr.io/sixdegreesuk/php-app:latest .
 
 # run the local image
 docker run -it --rm  --name php-app -p 5002:80 sixdegreesuk/php-app:liverpool
@@ -34,9 +34,9 @@ docker push sixdegreesuk/php-app:liverpool
 # ========== Azure Container Registry and Kubernetes below ============
 
 #login to azure container registry
-docker login acrprduks.azurecr.io.azurecr.io
+docker login acrprduks.azurecr.io -u acrprduks -p q5=lugW3pRuE9ChSpyZTI7x=fKuHUHJw
 
-docker push acrprduks.azurecr.io.azurecr.io/sixdegreesuk/php-app:latest
+docker push acrprduks.azurecr.io/sixdegreesuk/php-app:latest
 
 # deploy to Kubernetes using YAML file
 kubectl create -f php-k8s-manifest.yaml
