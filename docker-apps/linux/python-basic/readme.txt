@@ -1,6 +1,6 @@
 # This exercise shows how to containerise a very simple bit of code that runs in Python on Alpine Linux (very compact Linux distribution). 
 
-# ** Important - VS code folder on LHS must be set to PYTHON-BASIC and set your name in the image below!!! ******************
+# ******** Important - Set your terminal current directory so that the DOCKER file is in the current directory. Set your name in the image below!!! ******************
 
 # ***** build and store a local copy of image including a tag with my own name. The sixdegreesuk refers to the Docker Hub image repository that we will push this to.
 # *****  -t refers to tag and the . (dot) tells Docker where to find the files to build (current directory)

@@ -1,6 +1,6 @@
 # This exercise shows how to containerise a Python Django web app. 
 
-# ** Important - VS code folder on LHS must be set to PYTHON-DJANGO and set your name in the image below!!! ******************
+# ******** Important - Set your terminal current directory so that the DOCKER file is in the current directory. Set your name in the image below!!! ******************
 
 # create the local image
 docker image build -t sixdegreesuk/python-django:my-name-here .

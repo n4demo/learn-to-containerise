@@ -1,3 +1,5 @@
+# ******** Important - Set your terminal current directory so that the DOCKER file is in the current directory. Set your name in the image below!!! ******************
+
 # create the local image
 docker image build -t sixdegreesuk/go:latest .
 

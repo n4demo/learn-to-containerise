@@ -1,6 +1,6 @@
 # This first exercise shows how to containerise a very simple bit of code that runs in Ubuntu Linux. 
 
-# ** Important - VS code folder on LHS must be set to UBUNTU and set your name in the image below!!! ******************
+# ******** Important - Set your terminal current directory so that the DOCKER file is in the current directory. Set your name in the image below!!! ******************
 
 # create the local image. sixdegreesuk refers to the repository, ubuntu-test refers to the application and my-name-here is the tag for this application
 docker image build -t sixdegreesuk/ubuntu-test:my-name-here .

@@ -1,7 +1,7 @@
 
 # ================PART 1: This exercise shows how to containerise a very simple Python web application. 
 
-# ********** Important - VS code folder on LHS must be set to PYTHON-STANDARD and set your name in the app.py and image below!!! *******
+# ******** Important - Set your terminal current directory so that the DOCKER file is in the current directory. Set your name in the image below!!! ******************
 
 # open the Dockerfile on LHS and try to work out what is does
 

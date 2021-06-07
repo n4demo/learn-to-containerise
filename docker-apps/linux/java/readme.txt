@@ -1,6 +1,6 @@
 # This exercise shows how to containerise a very simple bit of code that runs in Ubuntu Linux. 
 
-# ** Important - VS code folder on LHS must be set to JAVA and set your name in the image below!!! ******************
+# ******** Important - Set your terminal current directory so that the DOCKER file is in the current directory. Set your name in the image below!!! ******************
 
 # create the local image which is stored on your laptop 
 docker image build -t sixdegreesuk/java-my-name-here .
