@@ -21,9 +21,9 @@ docker login --username sixdegreesuk
 docker push sixdegreesuk/go:latest
 
 #login to azure container registry
-docker login <myregistry>.azurecr.io
+docker login acrprduks.azurecr.io
 
-docker push <myregistry.azurecr.io>/samples/go-mike
+docker push acrprduks.azurecr.io/sixdegreesuk/go:latest
 
 kubectl apply -f go-kube-manifest.yaml
 

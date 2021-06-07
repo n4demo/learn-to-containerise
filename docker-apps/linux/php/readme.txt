@@ -34,9 +34,9 @@ docker push sixdegreesuk/php-app:liverpool
 # ========== Azure Container Registry and Kubernetes below ============
 
 #login to azure container registry
-docker login <myregistry>.azurecr.io
+docker login acrprduks.azurecr.io.azurecr.io
 
-docker push <myregistry>.azurecr.io/sixdegreesuk/php-app:latest
+docker push acrprduks.azurecr.io.azurecr.io/sixdegreesuk/php-app:latest
 
 # deploy to Kubernetes using YAML file
 kubectl create -f php-k8s-manifest.yaml
