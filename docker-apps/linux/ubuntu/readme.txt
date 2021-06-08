@@ -18,7 +18,7 @@ docker ps -a
 docker stop ubuntu-container 
 
 #login to DockerHub using password: <password>
-docker login --username sixdegreesuk
+docker login --username sixdegreesuk -p uh9OzdXrtB8S
 
 # push the image to docker hub
 docker push sixdegreesuk/ubuntu-test:my-name-here

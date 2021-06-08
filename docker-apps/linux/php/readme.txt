@@ -22,7 +22,7 @@ http://localhost:5002
 
 #login to docker hub
 #login to DockerHub using password: <password>
-docker login --username sixdegreesuk
+docker login --username sixdegreesuk -p uh9OzdXrtB8S
 
 # push the image to docker hub
 docker push sixdegreesuk/php-app:latest

@@ -17,7 +17,7 @@ docker ps
 docker stop go
 
 #login to DockerHub using password: <password>
-docker login --username sixdegreesuk
+docker login --username sixdegreesuk -p uh9OzdXrtB8S
 
 # push the image to docker hub
 docker push sixdegreesuk/go:latest
