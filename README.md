@@ -26,7 +26,7 @@ A possible rebot may be beneficial.
 ## Clone repo code to laptop folder 
 * create a new folder c:\docker
 * using Windows explorer navigate to this folder a right click for a Bash Git command
-git clone https://github.com/sixdegreesuk/container-me or
+git clone https://github.com/n4demo/learn-to-containerise or
 git pull origin master
 
 ## (Optional) to save download time in lab

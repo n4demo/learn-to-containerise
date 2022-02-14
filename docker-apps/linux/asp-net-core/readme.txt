@@ -4,9 +4,9 @@
 
 
 # open a new terminal and paste
-docker image build -t sixdegreesuk/aspnetapp:v3 -f ./aspnetapp/Dockerfile . 
+docker image build -t n4demo/aspnetapp:v3 -f ./aspnetapp/Dockerfile . 
 
-docker run -it --rm -p 80:8080 --name aspnetapp sixdegreesuk/aspnetapp:v3
+docker run -it --rm -p 80:8080 --name aspnetapp n4demo/aspnetapp:v3
 
 docker stop aspnetapp
 
@@ -15,11 +15,11 @@ docker ps
 # run in browser
 http://localhost:5014
 
-docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" sixdegreesuk/aspnetapp:v3
+docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" n4demo/aspnetapp:v3
 
 #login to DockerHub using password: <password>
-docker login --username sixdegreesuk
+docker login --username n4demo -p <password>
 
 # push the image to docker hub
-docker push sixdegreesuk/aspnetapp:v3
+docker push n4demo/aspnetapp:v3
 

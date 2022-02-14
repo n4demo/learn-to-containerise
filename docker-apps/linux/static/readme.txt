@@ -4,22 +4,22 @@
 # e.g docker build -t static .
 #
 # create the local image by OPENING a NEW TERMINAL WINDOW and paste in the docker image build code below. 
-# Note: sixdegreesuk refers to the repository, static refers to the application and my-name-here is the tag for this application. 
+# Note: n4demo refers to the repository, static refers to the application and my-name-here is the tag for this application. 
 # the dot refers to the current directory
 
-docker image build -t sixdegreesuk/static .
+docker image build -t n4demo/static .
 
 # run the local image
-docker run -it --rm  --name static -p 5012:80 sixdegreesuk/static
+docker run -it --rm  --name static -p 5012:80 n4demo/static
 
 # run in browser
 http://localhost:5012
 
 #login to DockerHub using password: <password>
-docker login --username sixdegreesuk
+docker login --username n4demo -p <password>
 
 # push the image to docker hub
-docker push sixdegreesuk/static
+docker push n4demo/static
 
 # Delete all containers
 docker rm $(docker ps -a -q)
