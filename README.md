@@ -1,5 +1,5 @@
 # Audience
-Developers, Solutioon Architects
+Developers, Solution Architects
 
 
 # Migrating web applications into Docker images
