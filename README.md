@@ -24,7 +24,7 @@ run a command prompt as admin and type:
 A possible rebot may be beneficial. 
 
 ## Clone repo code to laptop folder 
-* create a new folder c:\docker
+* create a new folder e.g: c:\docker
 * using Windows explorer navigate to this folder a right click for a Bash Git command
 git clone https://github.com/n4demo/learn-to-containerise or
 git pull origin master
@@ -41,8 +41,8 @@ To download base images (on wifi) to speed things up when building Docker images
 * docker pull microsoft/aspnet:4.7.2-windowsservercore-1803  
 
 ## Start lab
-* In VS code open and set folder to Ubuntu
-* follow the Readme for instructions
+* In VS code open and set folder to c:\docker\docker-root\docker-apps\linux\ubuntu
+* follow the readme.txt for instructions
 
 
 
