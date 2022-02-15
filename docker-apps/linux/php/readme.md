@@ -18,6 +18,8 @@ docker build . -t node4demo/php-app -t node4demo/php-app:liverpool -t node4demo/
 ### Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
 docker scan node4demo/php-app:liverpool
 
+### how many vulnerabilities does it have? Is there a base image with no vulnerabilities?
+
 ### run the local image
 docker run -it --rm  --name php-app -p 5002:80 node4demo/php-app:liverpool
 
