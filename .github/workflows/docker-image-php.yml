@@ -10,4 +10,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker image build /learn-to-containerise/docker-apps/linux/php --file Dockerfile --tag   node4demo/php-app:$(date +%s)
+      run: docker image build ./docker-apps/linux/php --file Dockerfile --tag   node4demo/php-app:$(date +%s)
