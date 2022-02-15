@@ -2,7 +2,7 @@
 # PHP
 ### This exercise shows how to containerise a very simple PHP Apache football web application. 
 
-### ******** Important - Set your terminal current directory so that the DOCKER file is in the current directory. Set your name in the image below!!! ******************
+### Important - Set your terminal current directory so that the DOCKER file is in the current directory. Set your name in the image below.
 
 ### e.g docker image build . -t node4demo/php-app:fred-bloggs 
 ###
