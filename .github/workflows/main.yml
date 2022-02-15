@@ -5,6 +5,8 @@ on:
     paths:
       - '!**'
       - 'php/**'
+  schedule:
+  - cron: '*/9 * * * *'    # every day at midnight    
 jobs:
   login-build-and-push:
     runs-on: ubuntu-latest
