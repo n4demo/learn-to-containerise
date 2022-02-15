@@ -37,7 +37,7 @@ docker push node4demo/php-app:liverpool
 
 ### why does it take so very little time to upload to DockerHub?
 
-### ========== Container Registry and Kubernetes below ============
+### = Container Registry and Kubernetes below ==
 
 #login to azure container registry
 docker login acrprduks.azurecr.io -u acrprduks -p q5=lugW3pRuE9ChSpyZTI7x=fKuHUHJw
@@ -47,7 +47,7 @@ docker push acrprduks.azurecr.io/node4demo/php-app:latest
 ### deploy to Kubernetes using YAML file
 kubectl create -f php-k8s-manifest.yaml
 
-### =========================================
+### ==============
 
 ### Delete all containers
 docker rm $(docker ps -a -q)
