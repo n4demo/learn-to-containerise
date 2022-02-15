@@ -12,4 +12,4 @@ jobs:
     - name: Build the Docker image
       run: |
         pwd;
-        docker image build ./docker-apps/linux/php node4demo/php-app:$(date +%s)
+        docker image build ./docker-apps/linux/php -t node4demo/php-app:$(date +%s)
