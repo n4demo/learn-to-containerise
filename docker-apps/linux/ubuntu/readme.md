@@ -13,6 +13,11 @@ docker container run --env NAME=my-name-here --name ubuntu-container --rm  node4
 
 ### have a look at the Dockerfile on LHS and try and understand what it is doing
 
+### Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+docker scan node4demo/ubuntu-test:my-name-here
+
+### Edit the Docker file to use: FROM ubuntu:rolling
+
 ### show all containers running or not
 docker ps -a
 

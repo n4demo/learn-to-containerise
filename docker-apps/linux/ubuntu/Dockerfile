@@ -1,3 +1,3 @@
-FROM ubuntu
-CMD echo "This is a test from Ubuntu from" $NAME 
+FROM ubuntu:rolling
+CMD echo "hi "$NAME", you have been succesful in containerising and running this simple Ubuntu application." 
 
