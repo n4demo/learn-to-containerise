@@ -12,7 +12,10 @@
 docker image build . -t node4demo/php-app:my-name-here 
 
 # add additional tags to the same image by rebuilding image
-docker build -t node4demo/php-app -t node4demo/php-app:liverpool -t node4demo/php-app:latest -t acrprduks.azurecr.io/node4demo/php-app:latest .
+docker build . -t node4demo/php-app -t node4demo/php-app:liverpool -t node4demo/php-app:latest -t my-registry.azurecr.io/node4demo/php-app:latest
+
+#Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+docker scan node4demo/php-app:liverpool
 
 # run the local image
 docker run -it --rm  --name php-app -p 5002:80 node4demo/php-app:liverpool
