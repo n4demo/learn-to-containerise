@@ -1,12 +1,12 @@
 name: php 
 on:
   push:
-    branches: master
+    branches: main
     paths:
       - '!**'
       - 'php/**'
-  schedule:
-  - cron: '*/9 * * * *'    # every day at midnight    
+  # schedule:
+  # - cron: '*/9 * * * *'    # every 9 mins    
 jobs:
   login-build-and-push:
     runs-on: ubuntu-latest
