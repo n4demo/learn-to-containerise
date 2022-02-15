@@ -4,4 +4,4 @@ az group create --name WebApp4ContainersRg --location westeurope
 
 az appservice plan create --name WebAppLinuxPlan --resource-group WebApp4ContainersRg --sku B1 --is-linux
 
-az webapp create --resource-group WebApp4ContainersRg --plan WebAppLinuxPlan --name cdw-webforms-basic --deployment-container-image-name sixdegreesuk/webforms-basic:v1.0.0
+az webapp create --resource-group WebApp4ContainersRg --plan WebAppLinuxPlan --name cdw-webforms-basic --deployment-container-image-name node4demo/webforms-basic:v1.0.0

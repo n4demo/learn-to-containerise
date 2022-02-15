@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: iis
-        image: sixdegreesuk/iis:v1.0.0
+        image: node4demo/iis:v1.0.0
         ports:
         - containerPort: 80

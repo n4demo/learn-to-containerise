@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: go
-        image: sixdegreesuk/go:latest
+        image: node4demo/go:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80

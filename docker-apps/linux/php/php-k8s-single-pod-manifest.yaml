@@ -5,6 +5,6 @@ metadata:
 spec:
   containers:
   - name: php
-    image: sixdegreesuk/php-app:latest
+    image: node4demo/php-app:latest
     imagePullPolicy: Always
 

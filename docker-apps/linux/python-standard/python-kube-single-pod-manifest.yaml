@@ -5,5 +5,5 @@ metadata:
 spec:
   containers:
   - name: python
-    image: sixdegreesuk/python-standard:v1.0.0
+    image: node4demo/python-standard:v1.0.0
     imagePullPolicy: Always

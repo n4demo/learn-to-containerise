@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: nodejs
-        image: sixdegreesuk/nodejs
+        image: node4demo/nodejs
         imagePullPolicy: Always
         ports:
         - containerPort: 8080

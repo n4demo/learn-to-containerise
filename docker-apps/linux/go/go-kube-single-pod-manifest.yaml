@@ -5,6 +5,6 @@ metadata:
 spec:
   containers:
   - name: go
-    image: sixdegreesuk/go:latest
+    image: node4demo/go:latest
     imagePullPolicy: Always
 

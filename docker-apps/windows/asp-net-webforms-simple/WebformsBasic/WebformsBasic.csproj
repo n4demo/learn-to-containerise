@@ -173,7 +173,7 @@
       <DependentUpon>Dockerfile</DependentUpon>
     </None>
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
-    <None Include="Properties\PublishProfiles\registry.hub.docker.com_sixdegreesuk.pubxml" />
+    <None Include="Properties\PublishProfiles\registry.hub.docker.com_node4demo.pubxml" />
     <None Include="Properties\PublishProfiles\registry.hub.docker.com_wardlen.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />

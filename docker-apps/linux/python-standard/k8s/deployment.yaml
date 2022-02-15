@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: python-standard1
-        image: sixdegreesuk/python-standard:v1.0.0
+        image: node4demo/python-standard:v1.0.0
         ports:
         - containerPort: 5000
         
