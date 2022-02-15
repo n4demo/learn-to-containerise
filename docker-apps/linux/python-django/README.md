@@ -1,23 +1,19 @@
-# Django starter app for Web App on Linux
+### This exercise shows how to containerise a Python Django web app. 
 
-A simple Python Django application running in a Docker container. The custom image uses port 8000. 
+### ******** Important - Set your terminal current directory so that the DOCKER file is in the current directory. Set your name in the image below!!! ******************
 
-## Setting up custom image for web App on Linux 
-- Create a Web App on Linux using CLI or Azure portal
-- Configure your web app to custom image 
-- Add an App Setting ```WEBSITE_PORT = 8000 ``` for your app 
-- Browse your site 
- 
-# Contributing
+### create the local image
+docker image build -t node4demo/python-django:my-name-here .
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.microsoft.com.
+### run the local image
+docker container run --name python_django -it --rm  -p 80:80 node4demo/python-django:my-name-here
 
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+docker ps
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" node4demo/python-standard:v1.0.0
+
+#login to docker hub
+docker login --username node4demo -p <password>
+
+### push the image to docker hub
+docker push node4demo/python-django:my-name-here
