@@ -47,7 +47,7 @@ docker push acrprduks.azurecr.io/node4demo/php-app:latest
 ### deploy to Kubernetes using YAML file
 kubectl create -f php-k8s-manifest.yaml
 
-### ============================================
+### =========================================
 
 ### Delete all containers
 docker rm $(docker ps -a -q)
