@@ -4,7 +4,7 @@ on:
     branches: main
     paths:
       - '!**'
-      - 'php/**'
+      - 'docker-app/linux/php/**'
   # schedule:
   # - cron: '*/9 * * * *'    # every 9 mins    
 jobs:
