@@ -1,4 +1,4 @@
-name: php
+name: php 
 on:
   push:
     branches: master
