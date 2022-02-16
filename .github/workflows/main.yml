@@ -29,10 +29,10 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          context: ./${{ github.workflow }}/
-          file: ./${{ github.workflow }}/Dockerfile
+          context: ./docker-apps/linux/php/
+          file: ./docker-apps/linux/php/Dockerfile
           tags: |
             ghcr.io/${{ github.repository_owner }}/${{ github.workflow }}:latest
             ghcr.io/${{ github.repository_owner }}/${{ github.workflow }}:${{ steps.date.outputs.date }}
       - name: Image digest
-        run: echo ${{ steps.docker_build.outputs.digest }}
+        run: echo ${{ steps.docker_build.outputs.digest }}e
