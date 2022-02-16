@@ -11,28 +11,28 @@
 - php-app refers to the application and my-name-here is a tag for this application. 
 - The dot refers to the current directory (assuming the current directory has th app code and Docker file
 
-docker image build . -t node4demo/php-app:my-name-here 
+*docker image build . -t node4demo/php-app:my-name-here* 
 
 ### add additional tags to the same image by rebuilding image
-docker build . -t node4demo/php-app -t node4demo/php-app:liverpool -t node4demo/php-app:latest
+*docker build . -t node4demo/php-app -t node4demo/php-app:liverpool -t node4demo/php-app:latest*
 
 ### Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
-docker scan node4demo/php-app:liverpool
+*docker scan node4demo/php-app:liverpool*
 
 ### how many vulnerabilities does it have? Is there a base image with no vulnerabilities?
 
 ### run the local image
-docker run -it --rm  --name php-app -p 5002:80 node4demo/php-app:liverpool
+*docker run -it --rm  --name php-app -p 5002:80 node4demo/php-app:liverpool*
 
 ### run in browser
 http://localhost:5002
 
 #login to docker hub
 #login to DockerHub
-docker login --username node4demo -p <password>
+*docker login --username node4demo -p <password>*
 
 ### push the image to docker hub
-docker push node4demo/php-app:latest
+*docker push node4demo/php-app:latest*
 docker push node4demo/php-app:my-name-here
 docker push node4demo/php-app:liverpool
 
