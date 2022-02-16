@@ -1,19 +1,19 @@
 
 # PHP
-### This exercise shows how to containerise a very simple PHP Apache football web application. 
+### This exercise shows how to containerise a very simple PHP Apache football web application using VS Code and Docker Desktop. 
 
-### Important - Set your terminal current directory so that the DOCKER file is in the current directory. Set your name in the image below.
-
+## Important - Set your VS Code folder or terminal current directory so that the DOCKER file is in the current directory. Set your name in the image below.
 ### e.g docker image build . -t node4demo/php-app:fred-bloggs 
+
 ###
-### create the local image by OPENING a NEW TERMINAL WINDOW and paste in the docker image build code below. 
-### Note: node4demo refers to the repository, php-app refers to the application and my-name-here is the tag for this application. 
-### the dot refers to the current directory
+### create the local image by OPENING a NEW VS CODE TERMINAL WINDOW and paste in the docker image build code below. 
+### Note: node4demo refers to a DockerHub account that already exists, php-app refers to the application and my-name-here is a tag for this application. 
+### the dot refers to the current directory (assuming the current directory has th app code and Docker file
 
 docker image build . -t node4demo/php-app:my-name-here 
 
 ### add additional tags to the same image by rebuilding image
-docker build . -t node4demo/php-app -t node4demo/php-app:liverpool -t node4demo/php-app:latest -t my-registry.azurecr.io/node4demo/php-app:latest
+docker build . -t node4demo/php-app -t node4demo/php-app:liverpool -t node4demo/php-app:latest
 
 ### Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
 docker scan node4demo/php-app:liverpool
