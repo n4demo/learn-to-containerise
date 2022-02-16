@@ -9,7 +9,7 @@
 ### create the local image by OPENING a NEW VS CODE TERMINAL WINDOW and paste in the docker image build code below. 
 - node4demo refers to a DockerHub account that already exists
 - php-app refers to the application and my-name-here is a tag for this application. 
-- The dot refers ### to the current directory (assuming the current directory has th app code and Docker file
+- The dot refers to the current directory (assuming the current directory has th app code and Docker file
 
 docker image build . -t node4demo/php-app:my-name-here 
 
