@@ -21,8 +21,8 @@
 
 ### how many vulnerabilities does it have? Is there a base image with no vulnerabilities?
 
-### run the local image
-*docker run -it --rm  --name php-app -p 5002:80 node4demo/php-app:liverpool*
+### run the local image with 200MB memory, 
+*docker container run -m 200M -it --rm  --name php-app -p 5002:80 node4demo/php-app:liverpool*
 
 ### run in browser
 http://localhost:5002
