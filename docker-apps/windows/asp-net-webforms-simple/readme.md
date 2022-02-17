@@ -17,6 +17,8 @@
 3. open a new terminal and paste
 docker image build -t node4demo/webforms:my-name-here -f ./webformsbasic/Dockerfile . 
 
+### If you receive this error: This error may indicate that the docker daemon is not running. - switch to Windows Containers
+
 4. Use 'docker scan' to run Snyk tests against images to find vulnerabilities.
 
 *docker scan node4demo/webforms:my-name-here*
