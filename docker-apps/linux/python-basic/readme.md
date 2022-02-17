@@ -13,6 +13,7 @@
 3. to clear your Terminal screen type:     clear 
 
 4. add 2 additional tags to the same image. Note that we include the version as part of the tag
+
 *docker build -t node4demo/python-basic:v1.0.0 -t node4demo/python-basic:latest .*
 
 5. run the local image in a Linux VM hosted on your laptop inside Docker desktop
@@ -25,12 +26,16 @@ docker ps -a
 
 7. show logs for this container - why did it fail?
 
-docker logs -f node4demo/python-basic:my-name-here
+*docker logs -f node4demo/python-basic:my-name-here*
 
 8. login to DockerHub
 
-docker login --username node4demo -p <password>
+*docker login --username node4demo -p my-password*
 
 9. push the image to docker hub
 
-docker push node4demo/python-basic:my-name-here
+*docker push node4demo/python-basic:my-name-here*
+
+### Congratulations.. now let's containerise our first python web application.
+
+18. In VS Code: File..Open Folder ..docker-apps\linux\python-standard
