@@ -58,16 +58,16 @@
 18. In VS Code: File..Open Folder ..docker-apps\linux\asp-net-core
 
 
-#.
-#.
-#.
-#.
-#.
-#.
-#.
-#.
-#.
-#.
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
+# .
 ### Part 3 Web Apps for Containers =======  you will need an Azure subscription to do this=================
 ### You will now see how to run containers in Azure App Services
 #From the Azure portal create a new App Service Plan and select Linux as the OS. Set to a Premium performance level
