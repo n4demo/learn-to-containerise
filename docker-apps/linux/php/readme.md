@@ -2,7 +2,7 @@
 # PHP
 ## This exercise shows how to containerise a very simple PHP Apache web application using VS Code and Docker Desktop and uploading to DockerHub.  
 
-1. Important - Set your VS Code folder or terminal current directory so that the DOCKER file is in the current directory.
+1. Important - Set your VS Code folder so that the DOCKER file is in the current directory.
 2. create the local image by OPENING a NEW VS CODE BASH TERMINAL WINDOW and paste in the docker image build code below and edit your name. 
 - node4demo refers to container registry account or owner that already exists
 - php refers to the application 
