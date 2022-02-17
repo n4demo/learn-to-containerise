@@ -8,7 +8,7 @@
 
 <body>
   <h1>
-  <?php echo "My name here - PHP website running in docker Container"; ?>
+  <?php echo "PHP website running in docker Container"; ?>
   </h1>
 
    <img src="images/php.png" />

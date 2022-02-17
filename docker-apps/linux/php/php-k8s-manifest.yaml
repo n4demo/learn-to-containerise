@@ -22,15 +22,15 @@ spec:
     spec:
       containers:
       - name: php
-        image: node4demo/php-app:latest
+        image: node4demo/php-app:1.0.0
         imagePullPolicy: Always
-#        resources: 
-#         requests:
-#          memory: "2000Mi"
-#          cpu: "2000m"
-#         limits:
-#          memory: "2500Mi"
-#          cpu: "2500m"
+        resources: 
+         requests:
+          memory: "200Mi"
+          cpu: "200m"
+         limits:
+          memory: "250Mi"
+          cpu: "250m"
         ports:
         - containerPort: 80
 ---
@@ -40,7 +40,7 @@ kind: Service
 metadata:
   name: php
   annotations:
-    service.beta.kubernetes.io/azure-load-balancer-internal: "false" # set to true for public IP
+    service.beta.kubernetes.io/azure-load-balancer-internal: "false" # set to false for public IP
     # service.beta.kubernetes.io/azure-load-balancer-internal-subnet: "apps-subnet" # specify subnet
 spec:
   type: LoadBalancer

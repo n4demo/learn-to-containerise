@@ -6,7 +6,7 @@
 ### e.g docker image build . -t node4demo/php-app:fred-bloggs 
 
 ### create the local image by OPENING a NEW VS CODE TERMINAL WINDOW and paste in the docker image build code below. 
-- node4demo refers to a DockerHub account or owner that already exists
+- node4demo refers to container registry account or owner that already exists
 
 - php-app refers to the application and my-name-here is a tag for this application. 
 - The . (dot) refers to the current directory (assuming the current directory has th app code and Docker file
@@ -14,10 +14,12 @@
 *docker image build . -t node4demo/php-app:my-name-here* 
 
 ### add additional tags to the same image by rebuilding image
-*docker build . -t node4demo/php-app -t node4demo/php-app:liverpool -t node4demo/php-app:latest*
+*docker build . -t node4demo/php-app -t node4demo/php-app:liverpool -t node4demo/php-app:1.0.0*
 
 ### optional - build ready to deploy to GitHub container registry
 *docker build . -t ghcr.io/n4demo/php-app:latest*
+
+## Question: Why are we now using n4demo instead of node4demo as the owner? 
 
 ### Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
 *docker scan node4demo/php-app:liverpool*
@@ -35,14 +37,14 @@ http://localhost:5002
 #login to DockerHub
 *docker login --username node4demo -p <password>*
 
-### push the image to docker hub
+# Container Registry
+
+### push the image to docker hub container registry
 *docker push node4demo/php-app:latest*
 *docker push node4demo/php-app:my-name-here*
 *docker push node4demo/php-app:liverpool*
 
 ## Question: Why does it take so very little time to upload to DockerHub?
-
-# Container Registry and Kubernetes
 
 ### login to Azure container registry
 *docker login n4demo.azurecr.io -u n4demo -p xxxx*
@@ -51,9 +53,9 @@ http://localhost:5002
 ### login to Github container registry
 *docker login ghcr.io -u n4demo -p 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*
 
-*docker push ghcr.io/n4demo/php-app:latest*
+*docker push ghcr.io/n4demo/php:latest*
 
-*docker container run -m 200M -it --rm  --name php-app -p 5003:80 ghcr.io/n4demo/php-app:latest*
+*docker container run -m 200M -it --rm  --name php -p 5003:80 ghcr.io/n4demo/php:latest*
 
 ### Delete all containers
 docker rm $(docker ps -a -q)
