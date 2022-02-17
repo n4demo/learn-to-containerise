@@ -5,9 +5,10 @@
 ## Important - Set your VS Code folder or terminal current directory so that the DOCKER file is in the current directory. Set your name in the image below.
 ### e.g docker image build . -t node4demo/php-app:fred-bloggs 
 
-### create the local image by OPENING a NEW VS CODE TERMINAL WINDOW and paste in the docker image build code below. 
+### create the local image by OPENING a NEW VS CODE BASH TERMINAL WINDOW and paste in the docker image build code below. 
 - node4demo refers to container registry account or owner that already exists
-- php refers to the application and my-name-here is a tag for this application. 
+- php refers to the application 
+- my-name-here is a tag for this application. 
 - The . (dot) refers to the current directory (assuming the current directory has th app code and Docker file
 
 *docker image build . -t node4demo/php-app:my-name-here* 
