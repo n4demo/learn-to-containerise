@@ -7,8 +7,7 @@
 
 ### create the local image by OPENING a NEW VS CODE TERMINAL WINDOW and paste in the docker image build code below. 
 - node4demo refers to container registry account or owner that already exists
-
-- php-app refers to the application and my-name-here is a tag for this application. 
+- php refers to the application and my-name-here is a tag for this application. 
 - The . (dot) refers to the current directory (assuming the current directory has th app code and Docker file
 
 *docker image build . -t node4demo/php-app:my-name-here* 
@@ -53,9 +52,9 @@ http://localhost:5002
 ### login to Github container registry
 *docker login ghcr.io -u n4demo -p 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*
 
-*docker push ghcr.io/n4demo/php:latest*
+*docker push ghcr.io/n4demo/php-app:latest*
 
-*docker container run -m 200M -it --rm  --name php -p 5003:80 ghcr.io/n4demo/php:latest*
+*docker container run -m 200M -it --rm  --name php -p 5003:80 ghcr.io/n4demo/php-app:latest*
 
 ### Delete all containers
 docker rm $(docker ps -a -q)
