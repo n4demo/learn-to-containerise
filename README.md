@@ -7,31 +7,31 @@ The purpose of this training course is to remove the magic associated with conta
 
 ## Prerequisites
 
-* Gain admin rights to your laptop
-* Download and install GIT onto your laptop  (optional)
-* Download and install VS Code onto your laptop  
-* Download and install Docker Desktop onto your laptop  
-* Double click on fve.reg to allow you to switch between running Linux and Windows containers
+1. Gain admin rights to your laptop
+2. (Optional) Download and install GIT onto your laptop
+3. Download and install VS Code onto your laptop  
+4. Download and install Docker Desktop onto your laptop  
+5. Double click on fve.reg to allow you to switch between running Linux and Windows containers
 
 A possible rebot may be beneficial.  
 
 ## Check your Prerequisites
-run a command prompt as admin and type:
 
-* git version  
-* docker version 
-* Double click on fve.reg  
+6. Run VS Code and open a new BASH terminal
+7. enter: *git version*  
+8. enter  *docker version* 
+9. Double click on fve.reg  
 
 A possible rebot may be beneficial. 
 
 ## Clone repo code to laptop folder 
-* create a new folder e.g: c:\docker
-* using Windows explorer navigate to this folder
-* either, right click for a Bash Git command and paste in: git clone https://github.com/n4demo/learn-to-containerise
-* or, download the zip file, extract and copy to your above floder
+10. create a new folder e.g: c:\docker
+11. using Windows Explorer navigate to this above or chosen folder
+12. either, right click for a Bash Git command and paste in: *git clone https://github.com/n4demo/learn-to-containerise*
+13. or, download the zip file, extract and copy to your above floder
 
 ## (Optional) to save download time in lab
-To download base images\layers (on wifi) to speed things up when building Docker images, open a terminal in VS Code or command prompt and run:
+14. To download base images\layers (on wifi) to speed things up when building Docker images, open a terminal in VS Code or command prompt and run:
 * docker pull ubuntu  
 * docker pull python  
 * docker pull python:3.6  
@@ -42,8 +42,8 @@ To download base images\layers (on wifi) to speed things up when building Docker
 * docker pull microsoft/aspnet:4.7.2-windowsservercore-1803  
 
 ## Start lab
-* In VS Code File...Open Folder.. c:\docker\docker-root\docker-apps\linux\ubuntu
-* follow the readme.md for instructions
+15. In VS Code File...Open Folder.. c:\docker\docker-root\docker-apps\linux\ubuntu
+16. follow the readme.md for instructions
 
 
 
