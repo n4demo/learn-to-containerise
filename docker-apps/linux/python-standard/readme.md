@@ -1,49 +1,57 @@
+# Python Web App
+## This exercise shows how to containerise a very simple Python web application using VS Code and Docker Desktop and uploading to DockerHub. 
 
-### ================PART 1: This exercise shows how to containerise a very simple Python web application. 
+1. Important - Set your VS Code folder or terminal current directory so that the DOCKER file is in the current directory.
+2. create the local image by OPENING a NEW VS CODE BASH TERMINAL WINDOW and paste in the docker image build code below and edit your name. 
+- node4demo refers to container registry account or owner that already exists
+- php refers to the application 
+- my-name-here is a tag for this application. 
+- The . (dot) refers to the current directory (assuming the current directory has th app code and Docker file
 
-### ******** Important - Set your terminal current directory so that the DOCKER file is in the current directory. Set your name in the image below!!! ******************
+*docker image build -t node4demo/python-standard:my-name-here .*
 
-### open the Dockerfile on LHS and try to work out what is does
+3. add 3 additional tags to the same image by rebuilding image. Note we add a version.
 
-### open app.py and overwrite you name - save file
+*docker build -t node4demo/python-standard:v1.0.0 -t node4demo/python-standard -t node4demo/python-standard:latest .*
 
-### create the local image. node4demo refers to the repository, python-standard refers to the application and my-name-here is the tag for this application 
-docker image build -t node4demo/python-standard:my-name-here .
+4. run the local image in a container hosted in a Linux VM hosted on your laptop
 
-### add 3 additional tags to the same image by rebuilding image. Note we add a version.
-docker build -t node4demo/python-standard:v1.0.0 -t node4demo/python-standard -t node4demo/python-standard:latest .
+*docker container run --name python-web-app --rm -i -t -p 5001:5000 node4demo/python-standard:my-name-here*
 
-### run the local image in a container hosted in a Linux VM hosted on your laptop
-docker container run --name python-web-app --rm -i -t -p 5001:5000 node4demo/python-standard:my-name-here
+### What port on the CONTAINER hads been opened to receive traffic?
+### What port on your laptop has has been set to forward to the open port on the container?
 
-### docker container run --name python-web-app --rm -i -t -p 5001:5000 node4demo/python-standard:latest
+5. view html returned from the web app in the command line window
 
-### view html returned from the web app in the command line window
-curl localhost:5001
+*curl localhost:5001*
 
-### run in browser
-http://localhost:5001
+6. Open Chrome or Edge and paste in the address below
 
-### open a new terminal window and run docker ps
-docker ps
+*http://localhost:5001*
 
-### open a new terminal window AND list all running containers
-docker container ls -aq
+7. open a new BASH terminal window and run docker ps
 
-### use CTL -c to stop the container
+*docker ps*
 
-### ============== PART 2 -- push image to Docker Hub =========================
+8. from 2nd BASH terminal window, list all running containers
 
-### login to DockerHub using password: <password>
-docker login --username node4demo -p <password>
+* docker container ls -aq*
 
-### push the image to DockerHub - make sure you have built this image with the tag specified below
+9. From the keyboard to shut down the container (from first terminal): CTL C 
+
+10. login to DockerHub
+docker login --username node4demo -p my-password
+
+11. push the image to DockerHub - make sure you have built this image with the tag specified below
 
 docker push node4demo/python-standard:v1.0.0
 
 docker push node4demo/python-standard:latest
 
-### *****CONGRATULATIONS - you now know how to containerise a PYthon web app application. ****************
+# CONGRATULATIONS - you now know how to containerise a simple Python web app application.
+
+
+
 
 
 ### =============== Part 3 Web Apps for Containers =======  you will need an Azure subscription to do this=================

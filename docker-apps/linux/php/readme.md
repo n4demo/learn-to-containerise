@@ -19,7 +19,8 @@
 
 5. Question: Why are we now using n4demo instead of node4demo as the owner? 
 
-6. Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+6. Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them.
+
 *docker scan node4demo/php-app:liverpool*
 
 7. how many vulnerabilities does it have? Is there a base image with no vulnerabilities?
