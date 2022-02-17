@@ -1,25 +1,39 @@
-# This exercise shows how to containerise a very simple bit of code that runs in ASP.NET Core. 
+#ASP.NET. .Net Framework (Windows)
 
-# ** Important - VS code folder on LHS must be set to WebformsBasic and set your name in the image below!!! ******************
+1. Switch to run Windows Containers by right clicking Docker (Whale) icon in system tray - Switch to Windows containers 
+
+### Containers feature is disabled. Enable it using the PowerShell script (in an administrative PowerShell) and restart your computer before using Docker Desktop: 
+
+*Enable-WindowsOptionalFeature -Online -FeatureName $("Microsoft-Hyper-V", "Containers") -All*
 
 
-# open a new terminal and paste
+1. Important - Set your VS Code folder so that the ASP-NET-WEBFORMS-SIMPLE is at the root.
+2. create the local image by OPENING a NEW VS CODE BASH TERMINAL WINDOW and paste in the docker image build code below and edit your name. 
+- node4demo refers to container registry account or owner that already exists
+- webforms refers to the application 
+- my-name-here is a tag for this application. 
+- The . (dot) refers to the current directory (assuming the current directory has th app code and Docker file
+
+3. open a new terminal and paste
 docker image build -t node4demo/webforms:my-name-here -f ./webformsbasic/Dockerfile . 
 
-docker run -it --rm -p 5014:80 --name aspnetapp node4demo/webforms:my-name-here
+4. Use 'docker scan' to run Snyk tests against images to find vulnerabilities.
 
-docker stop aspnetapp
+*docker scan node4demo/webforms:my-name-here*
 
-docker ps
+*docker run -it --rm -p 5014:80 --name aspnetapp node4demo/webforms:my-name-here*
 
-# run in browser
-http://localhost:5014
+*docker stop aspnetapp*
 
-docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" node4demo/aspnetapp:v3
+*docker ps*
 
-#login to docker hub
+5. run in browser
+
+*http://localhost:5014*
+
+6. login to docker hub
 docker login --username node4demo -p <password>
 
-# push the image to docker hub
+7. push the image to docker hub
 docker push node4demo/aspnetapp:v3
 
