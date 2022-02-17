@@ -1,25 +1,41 @@
-### This exercise shows how to containerise a very simple bit of code that runs in ASP.NET Core. 
 
-### Important - VS code folder on LHS must be set to ASP-NET-CORE and set your name in the image below!!! ******************
+# ASP.NET Core v3 (.NET Core)
+## This exercise shows how to containerise a very simple .NET web application using VS Code and Docker Desktop and uploading to DockerHub.  
 
+1. Important - Set your VS Code folder or terminal current directory so that the DOCKER file is in the current directory.
+2. create the local image by OPENING a NEW VS CODE BASH TERMINAL WINDOW and paste in the docker image build code below and edit your name. 
+- node4demo refers to container registry account or owner that already exists
+- php refers to the application 
+- my-name-here is a tag for this application. 
+- The . (dot) refers to the current directory (assuming the current directory has th app code and Docker file
 
-#### open a new terminal and paste
-docker image build -t node4demo/aspnetapp:v3 -f ./aspnetapp/Dockerfile . 
+*docker image build -t node4demo/aspnetapp:my-name -f ./aspnetapp/Dockerfile . *
 
-docker run -it --rm -p 80:8080 --name aspnetapp node4demo/aspnetapp:v3
+3. Use 'docker scan' to run Snyk tests against images to find any critical vulnerabilities and learn how to fix them.
 
-docker stop aspnetapp
+*docker scan node4demo/aspnetapp:my-name*
 
-docker ps
+8. run the local image with 500MB memory 
 
-### run in browser
-http://localhost:5014
+*docker run -it -m 500M  --rm -p 85:8080 --name aspnetapp node4demo/aspnetapp:my-name*
 
-docker inspect -f "{{ .NetworkSettings.Networks.nat.IPAddress }}" node4demo/aspnetapp:v3
+9. run in browser
 
-#login to DockerHub
-docker login --username node4demo -p <password>
+*http://localhost:85*
 
-### push the image to docker hub
-docker push node4demo/aspnetapp:v3
+10. Review the logs
+
+11. See what else is running a process
+
+*docker ps*
+
+*docker logs aspnetapp*
+
+*docker stop aspnetapp*
+
+12. login to DockerHub
+* docker login --username node4demo -p my-password*
+
+13. push the image to docker hub
+* docker push node4demo/aspnetapp:my-name*
 
