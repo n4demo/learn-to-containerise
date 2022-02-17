@@ -53,7 +53,7 @@
 
 12. (Optional) Edit the python file so that the python web app is listening on port 5500 and the container can expose this port. Hint edit the app.py file. Now try and re-run the app so that in you browser it work at http://localhost:5501
 
-### Congratulations.. now let's containerise our first MS ASP.NET Core python web application.
+### Congratulations.. now let's containerise our first MS ASP.NET Core web application.
 
 18. In VS Code: File..Open Folder ..docker-apps\linux\asp-net-core
 
