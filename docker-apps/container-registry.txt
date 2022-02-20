@@ -1,1 +1,0 @@
-Dockerhub username: node4demo  password: demo4node4
