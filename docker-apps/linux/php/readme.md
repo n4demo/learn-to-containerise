@@ -3,7 +3,7 @@
 ## This exercise shows how to containerise a very simple PHP Apache web application using VS Code terminal with Docker Desktop, then uploading to DockerHub.  
 
 1. In VS Code File..Open Folder - navigate to docker-apps/linux/php folder, so that the DOCKER file is in the current directory. 
-2. create the local image by OPENING a NEW VS CODE BASH TERMINAL WINDOW and paste in the docker image build code below and edit your name. 
+2. create the local image by OPENING a NEW VS CODE BASH TERMINAL WINDOW and paste in the docker image build code from BROWSER and edit your name. 
 
 - node4demo refers to container registry account or owner that already exists
 - php-app refers to the application 
@@ -71,3 +71,5 @@ docker rmi $(docker images -q)
 15. Question: Why are we now using n4demo instead of node4demo as the owner? 
 
 16. In VS Code: File..Open Folder ..docker-apps\linux\python-basic
+
+17. In browser: https://github.com/n4demo/learn-to-containerise/tree/main/docker-apps/linux/python-basic

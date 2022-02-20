@@ -2,7 +2,7 @@
 ## This exercise shows how to containerise a very simple Python web application using VS Code and Docker Desktop and uploading to DockerHub. 
 
 1. In VS Code File..Open Folder - navigate to docker-apps/linux/python-standard folder, so that the DOCKER file is in the current directory. 
-2. create the local image by OPENING a NEW VS CODE BASH TERMINAL WINDOW and paste in the docker image build code below and edit your name.
+2. create the local image by OPENING a NEW VS CODE BASH TERMINAL WINDOW and paste in the docker image build code from browser and edit your name.
 
 - node4demo refers to container registry account or owner that already exists
 - php refers to the application 
@@ -55,93 +55,6 @@
 
 ### Congratulations.. now let's containerise our first MS ASP.NET Core web application.
 
-18. In VS Code: File..Open Folder ..docker-apps\linux\asp-net-core
+13. In VS Code: File..Open Folder ..docker-apps\linux\asp-net-core
 
-
-# .
-# .
-# .
-# .
-# .
-# .
-# .
-# .
-# .
-# .
-### Part 3 Web Apps for Containers =======  you will need an Azure subscription to do this=================
-### You will now see how to run containers in Azure App Services
-#From the Azure portal create a new App Service Plan and select Linux as the OS. Set to a Premium performance level
-#From the Azure portal create a new Web Apps for Containers resource and select to use Docker 
-#From Overview -select the web address and load in browser - NGINX
-### Select Container Settings - edit the image to node4demo/python-standard:v1.0.0 image in Docker Hub
-
-
-### ================ PART 4 Kubernetes ======== you will need an Azure subscription to do this ===================
-### You are now going to use the Azure 'az' command to perform tasks in Azure. So login to the portal and click on the > to open the CLI.
-
-### create a new resource group in your Azure subscription 
-az group create -l westeurope -n myrg
-
-### create AKS cluster using your *** unique name **
-az aks create -g myrg -n aks-zzz
-
-### download credentials into local file
-az aks get-credentials --name aks-zzz --resource-group myrg
-
-#test that credentials work ok
-kubectl get all
-
-### deploy the nginx web server image from Docker Hub into your kubernetes cluster
-kubectl run  –n nginx --image=nginx  
-kubectl expose deployment nginx --name=nginx
-
-### now determine IP address of nginx server
-kubectl get all -o wide
-
-### access web server in browser
-http://<ip-address>
-
-### now deploy the node4demo/python-standard:v1.0.0 web server image from Docker Hub into your kubernetes cluster
-
-node4demo/python-standard:v1.0.0
-
-### deploy python in a pod in kubernetes
-kubectl run  python --image=node4demo/python-standard:latest  
-
-### add a load balancer service on a public IP
-kubectl expose deployment python --type=LoadBalancer --name=python --port=80 --target-port=5000
-
-### now determine public IP address of python service
-kubectl get all -o wide
-
-### access python web server in browser
-http://<ip-address>
-
-### alternatively deploy python app to your kubernetes using the supplied YAML file
-### in the Azure CLI - upload python-kube-manifest.yaml
-kubectl apply -f python-kube-manifest.yaml
-
-kubectl get all -o wide
-
-### ==============   PART 5 Azure Container Registry ============
-### create an Azure Container Registry
-az acr create -n acr-my-name -g myrg --sku Standard
-
-### login to azure and then to Azure Container Registry
-az login
-az acr login --name acr-my-name.azurecr.io
-
-docker push acr-my-name.azurecr.io/samples/python-standard:v1.0.0
-
-==========================
-
-### Stop all containers
-docker container stop $(docker container ls -aq)
-
-### Delete all containers
-docker rm $(docker ps -a -q)
-
-### Delete all images
-docker rmi $(docker images -q)
-
-
+https://github.com/n4demo/learn-to-containerise/tree/main/docker-apps/linux/asp-net-core
