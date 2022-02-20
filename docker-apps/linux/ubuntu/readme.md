@@ -65,3 +65,4 @@ https://hub.docker.com
 ### Congratulations.. that was easy..now let's containerise our first web application (PHP).
 
 18. In VS Code: File..Open Folder ..docker-apps\linux\php
+19. go to https://github.com/n4demo/learn-to-containerise/blob/main/docker-apps/linux/php/readme.md

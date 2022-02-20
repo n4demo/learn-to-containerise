@@ -32,6 +32,7 @@ A possible rebot may be beneficial.
 
 ## (Optional) to save download time in lab
 14. To download base images\layers (on wifi) to speed things up when building Docker images, open a terminal in VS Code or command prompt and run:
+
 * docker pull ubuntu  
 * docker pull python  
 * docker pull python:3.6  
@@ -43,7 +44,7 @@ A possible rebot may be beneficial.
 
 ## Start lab
 15. In VS Code File...Open Folder.. c:\docker\docker-root\docker-apps\linux\ubuntu
-16. follow the readme.md for instructions
+16. Go to https://github.com/n4demo/learn-to-containerise/blob/main/docker-apps/linux/ubuntu/readme.md
 
 
 
