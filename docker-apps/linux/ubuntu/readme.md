@@ -3,9 +3,10 @@
 ### This first exercise shows how to containerise a very simple bit of code that runs in Ubuntu Linux. 
 
 1. In VS Code File..Open Folder - navigate to docker-apps/linux/Ubuntu folder, so that the DOCKER file is in the current directory. 
-2. Open a new VS Code BASH Terminal Window  
+2. Open a new VS Code BASH Terminal Window and maximize size 
 3. Confirm the terminal current directory is in the root of the Ubuntu folder
-4. Paste in the docker image build code below into the Terminal window, edit to your actual name and then tap enter key.
+4. In the browser open: https://github.com/n4demo/learn-to-containerise/blob/main/docker-apps/linux/ubuntu/readme.md
+4. From the browser: paste in the docker image build code below into the Terminal window, edit to your actual name and then tap enter key.
 
 - node4demo refers to container registry account or owner that already exists
 - ubuntu-test refers to the application 
