@@ -1,4 +1,3 @@
-
 # ASP.NET Core v3 (.NET Core)
 ### This exercise shows how to containerise a very simple .NET web application using VS Code and Docker Desktop and uploading to DockerHub.  
 
