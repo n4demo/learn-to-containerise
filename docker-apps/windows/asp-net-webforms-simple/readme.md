@@ -20,21 +20,21 @@ Enable-WindowsOptionalFeature -Online -FeatureName $("Microsoft-Hyper-V", "Conta
 ```
 docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.8
 
-docker image build . -t node4demo/webforms -f ./webformsbasic/Dockerfile
+docker image build . -t node4demo/webforms:v3 -f ./webformsbasic/Dockerfile
 ```
 
-### If you receive this error: This error may indicate that the docker daemon is not running. - switch to Windows Containers
+### If you receive this error: 'This error may indicate that the docker daemon is not running.' - switch to Windows Containers
 
 ## Note the size of the Layers being downloaded.
 
 4. Use 'docker scan' to run Snyk tests against images to find vulnerabilities.
 
 ```
-docker scan node4demo/webforms:my-name-here*
+docker scan node4demo/webforms:*
 
-docker run -it --rm -p 5014:80 --name webforms node4demo/webforms
+docker run -it --rm -p 5014:80 --name webforms node4demo/webforms:v3
 
-docker stop aspnetapp
+docker stop webforms
 
 docker ps
 ```
@@ -44,8 +44,9 @@ docker ps
 *http://localhost:5014*
 
 6. login to docker hub
-docker login --username node4demo -p <password>
+docker login --username node4demo -p my-password
 
 7. push the image to docker hub
-docker push node4demo/aspnetapp:v3
+
+docker push node4demo/webforms
 
