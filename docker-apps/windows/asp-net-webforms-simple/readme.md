@@ -33,7 +33,23 @@ docker run -it --rm --entrypoint powershell --name webforms node4demo/webforms:v
 docker run -it --rm -p 5014:80 --name webforms node4demo/webforms:v3
 ```
 
-6. run in browser
+7. Obtain the ContainerID
+
+```
+docker ps -a 
+```
+
+8. Gain a command shell into the running container and list the directories
+
+```
+docker exec -it  ContainerID 
+
+dir
+
+curl localhost/index.html
+```
+
+9. run in browser
 
 *http://localhost:5014*
 
