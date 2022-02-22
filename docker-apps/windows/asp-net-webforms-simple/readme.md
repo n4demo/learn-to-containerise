@@ -21,7 +21,14 @@ docker image build . -t node4demo/webforms:v3 -f ./webformsbasic/Dockerfile
 
 ### If you receive this error: 'This error may indicate that the docker daemon is not running.' - switch to Windows Containers
 
-5. Run the image
+5. Look inside the container at the folder structure
+
+```
+docker run -it --rm --entrypoint powershell --name webforms node4demo/webforms:v3 ls 
+```
+
+6. Run the Webforms app
+
 ```
 docker run -it --rm -p 5014:80 --name webforms node4demo/webforms:v3
 ```
