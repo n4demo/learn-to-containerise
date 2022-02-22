@@ -66,15 +66,15 @@ docker stop ubuntu-container
 ```
 docker scan node4demo/ubuntu-test:my-name-here
 ```
-### how many vulnerabilities did it show?
+#### how many vulnerabilities did it show?
 
 12. Edit the Docker file to use a different base image: FROM ubuntu:rolling 
 13. re-run the build
 14. re-run the image scan 
 
-### how many vulnerabilities did it show now. does it have any vulnerabilities?
+#### how many vulnerabilities did it show now. does it have any vulnerabilities?
 
-### how often should we re-build an image that is in production?
+#### how often should we re-build an image that is in production?
 
 15. show all containers running or not
 
