@@ -16,26 +16,33 @@
 ```
 docker image build . -t node4demo/ubuntu-test:my-name-here -f Dockerfile
 ```
-
 ### How long does it take?
 
 5. Build the image again. 
 
 ### How long does it take now - why?
 
-6. run the local image (and keep it running -t) in a container hosted in a Linux VM hosted on your laptop. Don't forget to edit your name.
+6. run the local image in a container hosted in a Linux VM hosted on your laptop. Don't forget to edit your name.
+
+```
+docker container run --env NAME=my-name-here --name ubuntu-container --rm  node4demo/ubuntu-test:my-name-here
+
+docker ps
+```
+
+7. run the local image again - and keep it running. 
 
 ```
 docker container run -d -t --env NAME=my-name-here --name ubuntu-container --rm  node4demo/ubuntu-test:my-name-here sleep infinity
 ```
 
-7. Now run docker ps to see the container is running and view the ContainerID
+7b. Now run docker ps again to see if the container is still running. View the ContainerID
 
 ```
 docker ps
 ```
 
-8. Use the ContainerID to run BASH command prompt in the container and navigate around in the running image
+8. Use the ContainerID to run the BASH executable to show a command prompt in the container. Navigate around in the running image file system
 
 ```
 docker exec -it ContainerID bash
