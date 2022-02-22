@@ -13,7 +13,9 @@
 - my-name-here is a tag for this application. 
 - . (dot) refers to the current directory (assuming the current directory has the app code and Docker file)
 
-*docker image build . -t node4demo/ubuntu-test:my-name-here -f Dockerfile*
+```
+docker image build . -t node4demo/ubuntu-test:my-name-here -f Dockerfile
+```
 
 ### How long does it take?
 
@@ -23,13 +25,17 @@
 
 6. run the local image in a container hosted in a Linux VM hosted on your laptop. Don't forget to edit your name.
 
-*docker container run --env NAME=my-name-here --name ubuntu-container --rm  node4demo/ubuntu-test:my-name-here* 
+```
+docker container run --env NAME=my-name-here --name ubuntu-container --rm  node4demo/ubuntu-test:my-name-here
+```
 
 7. Review the Dockerfile on LHS and try and understand what it is doing. What is the base image specified?
 
 8. Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them.
 
-*docker scan node4demo/ubuntu-test:my-name-here*
+```
+docker scan node4demo/ubuntu-test:my-name-here
+```
 
 ### how many vulnerabilities did it show?
 
@@ -43,27 +49,43 @@
 
 12. show all containers running or not
 
-*docker ps -a*
+```
+docker ps -a
+```
 
 13. see if the container is still running or not
 
-*docker stop ubuntu-container* 
+```
+docker stop ubuntu-container
+```
 
 14. login to DockerHub
 
-*docker login --username node4demo -p <password>*
+```
+docker login --username node4demo -p my-password
+```
 
 15. push the image to docker hub
 
-*docker push node4demo/ubuntu-test:my-name-here*
+```
+docker push node4demo/ubuntu-test:my-name-here
+```
 
 16. now view in DockerHub in browser by signing in as: node4demo 
 
+```
 https://hub.docker.com
+```
 
 17. drill into app to see the tags
 
 ### Congratulations.. that was easy..now let's containerise our first web application (PHP).
 
 18. In VS Code: File..Open Folder ..docker-apps\linux\php
-19. go to https://github.com/n4demo/learn-to-containerise/blob/main/docker-apps/linux/php/readme.md
+
+
+19. go to 
+
+```
+https://github.com/n4demo/learn-to-containerise/blob/main/docker-apps/linux/php/readme.md
+```
