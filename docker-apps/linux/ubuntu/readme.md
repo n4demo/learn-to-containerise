@@ -16,11 +16,11 @@
 ```
 docker image build . -t node4demo/ubuntu-test:my-name-here -f Dockerfile
 ```
-### How long does it take?
+#### How long does it take?
 
 5. Build the image again. 
 
-### How long does it take now - why?
+#### How long does it take now - why?
 
 6. run the local image in a container hosted in a Linux VM hosted on your laptop. Don't forget to edit your name.
 
@@ -59,7 +59,6 @@ exit
 ```
 docker stop ubuntu-container
 ```
-
 10. Review the Dockerfile on LHS and try and understand what it is doing. What is the base image specified?
 
 11. Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them.
@@ -67,7 +66,6 @@ docker stop ubuntu-container
 ```
 docker scan node4demo/ubuntu-test:my-name-here
 ```
-
 ### how many vulnerabilities did it show?
 
 12. Edit the Docker file to use a different base image: FROM ubuntu:rolling 
