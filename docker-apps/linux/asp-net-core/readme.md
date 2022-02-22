@@ -8,35 +8,53 @@
 - my-name-here is a tag for this application. 
 - The . (dot) refers to the current directory (assuming the current directory has th app code and Docker file
 
-*docker image build -t node4demo/aspnetapp:my-name -f ./aspnetapp/Dockerfile . *
+```
+docker image build -t node4demo/aspnetapp:my-name -f ./aspnetapp/Dockerfile . 
+```
 
 3. Use 'docker scan' to run Snyk tests against images to find any critical vulnerabilities and learn how to fix them.
 
-*docker scan node4demo/aspnetapp:my-name*
+```
+docker scan node4demo/aspnetapp:my-name
+```
 
 8. run the local image with 500MB memory 
 
-*docker run -it -m 500M  --rm -p 85:8080 --name aspnetapp node4demo/aspnetapp:my-name*
+```
+docker run -it -m 500M  --rm -p 85:8080 --name aspnetapp node4demo/aspnetapp:my-name
+```
 
 9. run in browser
 
-*http://localhost:85*
+```
+http://localhost:85*
+```
 
 10. Review the logs
 
-*docker logs aspnetapp*
+```
+docker logs aspnetapp*
+```
 
 11. See what else is running a process
 
-*docker ps*
+```
+docker ps
 
-*docker stop aspnetapp*
+docker stop aspnetapp*
+```
 
 ## Review the Docker file. How many images does this file create along the way to finally build the required image?
 
 12. login to DockerHub
-* docker login --username node4demo -p my-password*
+
+```
+docker login --username node4demo -p my-password
+```
 
 13. push the image to docker hub
-* docker push node4demo/aspnetapp:my-name*
+
+```
+docker push node4demo/aspnetapp:my-name
+```
 
