@@ -1,4 +1,4 @@
-#ASP.NET. .Net Framework (Windows)
+# ASP.NET. .Net Framework (Windows)
 
 1. Switch to run Windows Containers by right clicking Docker (Whale) icon in system tray - Switch to Windows containers 
 
@@ -18,7 +18,9 @@ Enable-WindowsOptionalFeature -Online -FeatureName $("Microsoft-Hyper-V", "Conta
 3. open a new terminal and paste
 
 ```
-docker image build -t node4demo/webforms -f ./webformsbasic/Dockerfile . *
+docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.8
+
+docker image build . -t node4demo/webforms -f ./webformsbasic/Dockerfile
 ```
 
 ### If you receive this error: This error may indicate that the docker daemon is not running. - switch to Windows Containers
