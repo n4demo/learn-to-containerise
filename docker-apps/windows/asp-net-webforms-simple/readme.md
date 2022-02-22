@@ -4,7 +4,9 @@
 
 ### Containers feature is disabled. Enable it using the PowerShell script (in an administrative PowerShell) and restart your computer before using Docker Desktop: 
 
-*Enable-WindowsOptionalFeature -Online -FeatureName $("Microsoft-Hyper-V", "Containers") -All*
+```
+Enable-WindowsOptionalFeature -Online -FeatureName $("Microsoft-Hyper-V", "Containers") -All
+```
 
 1. Important - Set your VS Code folder so that the ASP-NET-WEBFORMS-SIMPLE is at the root.
 2. create the local image by OPENING a NEW VS CODE BASH TERMINAL WINDOW and paste in the docker image build code below and edit your name. 
@@ -15,7 +17,9 @@
 
 3. open a new terminal and paste
 
-*docker image build -t node4demo/webforms:my-name-here -f ./webformsbasic/Dockerfile . *
+```
+docker image build -t node4demo/webforms -f ./webformsbasic/Dockerfile . *
+```
 
 ### If you receive this error: This error may indicate that the docker daemon is not running. - switch to Windows Containers
 
@@ -23,13 +27,15 @@
 
 4. Use 'docker scan' to run Snyk tests against images to find vulnerabilities.
 
-*docker scan node4demo/webforms:my-name-here*
+```
+docker scan node4demo/webforms:my-name-here*
 
-*docker run -it --rm -p 5014:80 --name aspnetapp node4demo/webforms:my-name-here*
+docker run -it --rm -p 5014:80 --name webforms node4demo/webforms
 
-*docker stop aspnetapp*
+docker stop aspnetapp
 
-*docker ps*
+docker ps
+```
 
 5. run in browser
 
