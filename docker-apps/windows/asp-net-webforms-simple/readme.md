@@ -42,7 +42,7 @@ docker ps -a
 8. Gain a command shell into the running container and list the directories and logs
 
 ```
-docker exec -it  ContainerID 
+docker exec -it  ContainerID cmd
 
 dir
 
