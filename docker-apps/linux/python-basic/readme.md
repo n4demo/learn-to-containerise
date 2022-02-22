@@ -9,38 +9,54 @@
 - my-name-here is a tag for this application. 
 - The . (dot) refers to the current directory (assuming the current directory has the app code and Docker file
 
-*docker image build . -t node4demo/python-basic:my-name-here*
+```
+docker image build . -t node4demo/python-basic:my-name-here
+```
 
 3. to clear your Terminal screen type:  clear 
 
 4. add 2 additional tags to the same image. Note that we include the version as part of the tag
 
-*docker build -t node4demo/python-basic:v1.0.0 -t node4demo/python-basic:latest .*
+```
+docker build -t node4demo/python-basic:v1.0.0 -t node4demo/python-basic:latest .
+```
 
 5. run the local image in a Linux VM hosted on your laptop inside Docker desktop
 
-*docker container run --name python_basic --rm -i -t node4demo/python-basic:my-name-here*
+```
+docker container run --name python_basic --rm -i -t node4demo/python-basic:my-name-here
+```
 
 6. show all containers running or not. Is it still running?
 
+```
 docker ps -a
+```
 
 7. show logs for this container - why did it fail?
 
-*docker logs -f node4demo/python-basic:my-name-here*
+```
+docker logs -f node4demo/python-basic:my-name-here
+```
 
 8. login to DockerHub
 
-*docker login --username node4demo -p my-password*
+```
+docker login --username node4demo -p my-password
+```
 
 9. push the image to docker hub
 
-*docker push node4demo/python-basic:my-name-here*
+```
+docker push node4demo/python-basic:my-name-here
+```
 
 ### Congratulations.. now let's containerise our first python web application.
 
 10. In VS Code: File..Open Folder ..docker-apps\linux\python-standard
 
+```
 https://github.com/n4demo/learn-to-containerise/tree/main/docker-apps/linux/python-standard
+```
 
 
