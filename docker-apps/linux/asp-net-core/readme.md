@@ -3,13 +3,20 @@
 
 1. Important - Set your VS Code folder or terminal current directory so that the DOCKER file is in the current directory.
 2. create the local image by OPENING a NEW VS CODE BASH TERMINAL WINDOW and paste in the docker image build code below and edit your name. 
+- run the 2 base images to download the images from MS imgage registry
 - node4demo refers to container registry account or owner that already exists
-- php refers to the application 
+- aspnetapp:my-name refers to the application 
 - my-name-here is a tag for this application. 
 - The . (dot) refers to the current directory (assuming the current directory has th app code and Docker file
 
 ```
+docker run mcr.microsoft.com/dotnet/core/aspnet:3.0-buster-slim dotnet --list-runtimes
+
+docker run mcr.microsoft.com/dotnet/core/sdk:3.0-buster --list-runtimes
+
 docker image build -t node4demo/aspnetapp:my-name -f ./aspnetapp/Dockerfile . 
+
+docker image ls node4demo/aspnetapp:my-name
 ```
 
 3. Use 'docker scan' to run Snyk tests against images to find any critical vulnerabilities and learn how to fix them.
