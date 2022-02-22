@@ -23,15 +23,39 @@ docker image build . -t node4demo/ubuntu-test:my-name-here -f Dockerfile
 
 ### How long does it take now - why?
 
-6. run the local image in a container hosted in a Linux VM hosted on your laptop. Don't forget to edit your name.
+6. run the local image (and keep it running -t) in a container hosted in a Linux VM hosted on your laptop. Don't forget to edit your name.
 
 ```
-docker container run --env NAME=my-name-here --name ubuntu-container --rm  node4demo/ubuntu-test:my-name-here
+docker container run -d -t --env NAME=my-name-here --name ubuntu-container --rm  node4demo/ubuntu-test:my-name-here sleep infinity
 ```
 
-7. Review the Dockerfile on LHS and try and understand what it is doing. What is the base image specified?
+7. Now run docker ps to see the container is running and view the ContainerID
 
-8. Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them.
+```
+docker ps
+```
+
+8. Use the ContainerID to run BASH command prompt in the container and navigate around in the running image
+
+```
+docker exec -it ContainerID bash
+
+ls
+
+whoami
+
+exit
+```
+
+9. Stop the container
+
+```
+docker stop ubuntu-container
+```
+
+10. Review the Dockerfile on LHS and try and understand what it is doing. What is the base image specified?
+
+11. Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them.
 
 ```
 docker scan node4demo/ubuntu-test:my-name-here
@@ -39,52 +63,52 @@ docker scan node4demo/ubuntu-test:my-name-here
 
 ### how many vulnerabilities did it show?
 
-9. Edit the Docker file to use a different base image: FROM ubuntu:rolling 
-10. re-run the build
-11. re-run the image scan 
+12. Edit the Docker file to use a different base image: FROM ubuntu:rolling 
+13. re-run the build
+14. re-run the image scan 
 
 ### how many vulnerabilities did it show now. does it have any vulnerabilities?
 
 ### how often should we re-build an image that is in production?
 
-12. show all containers running or not
+15. show all containers running or not
 
 ```
 docker ps -a
 ```
 
-13. see if the container is still running or not
+16. see if the container is still running or not
 
 ```
 docker stop ubuntu-container
 ```
 
-14. login to DockerHub
+17. login to DockerHub
 
 ```
 docker login --username node4demo -p my-password
 ```
 
-15. push the image to docker hub
+18. push the image to docker hub
 
 ```
 docker push node4demo/ubuntu-test:my-name-here
 ```
 
-16. now view in DockerHub in browser by signing in as: node4demo 
+19. now view in DockerHub in browser by signing in as: node4demo 
 
 ```
 https://hub.docker.com
 ```
 
-17. drill into app to see the tags
+20. drill into app to see the tags
 
 ### Congratulations.. that was easy..now let's containerise our first web application (PHP).
 
-18. In VS Code: File..Open Folder ..docker-apps\linux\php
+21. In VS Code: File..Open Folder ..docker-apps\linux\php
 
 
-19. go to 
+22. go to 
 
 ```
 https://github.com/n4demo/learn-to-containerise/blob/main/docker-apps/linux/php/readme.md
