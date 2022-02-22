@@ -34,12 +34,20 @@ docker scan node4demo/php-app:liverpool
 docker container run -m 200M -it --rm  --name php-app -p 5002:80 node4demo/php-app:liverpool
 ```
 
-7. run in browser
+7. From a new BASH Terminal run the code:
+
+```
+docker container list
+
+docker container logs php-app
+```
+
+8. run in browser
 ```
 http://localhost:5002
 ```
 
-8. login to DockerHub
+9. login to DockerHub
 
 ```
 docker login --username node4demo -p my-password
@@ -47,16 +55,16 @@ docker login --username node4demo -p my-password
 
 ### upload to Container Registry
 
-9. push the image to docker hub container registry
+10. push the image to docker hub container registry
 
 ```
 docker push node4demo/php-app:latest
 docker push node4demo/php-app:my-name-here
 docker push node4demo/php-app:liverpool
 ```
-10. Question: Why does it take so very little time to upload to DockerHub?
+11. Question: Why does it take so very little time to upload to DockerHub?
 
-11. Optionally - login to GitHub container registry (GHCR)
+12. Optionally - login to GitHub container registry (GHCR)
 
 ```
 docker login ghcr.io -u n4demo -p my-password
@@ -68,13 +76,13 @@ docker container run -m 200M -it --rm  --name php -p 5003:80 ghcr.io/n4demo/php-
 docker push ghcr.io/n4demo/php-app:latest
 ```
 
-12. Delete all containers
+13. Delete all containers
 
 ```
 docker rm $(docker ps -a -q)
 ```
 
-13. Delete all images
+14. Delete all images
 
 ```
 docker rmi $(docker images -q)
@@ -82,9 +90,9 @@ docker rmi $(docker images -q)
 
 ### Congratulations.. now let's containerise our first python application.
 
-14. In VS Code: File..Open Folder ..docker-apps\linux\python-basic
+15. In VS Code: File..Open Folder ..docker-apps\linux\python-basic
 
-15. In browser: 
+16. In browser: 
 
 ```
 https://github.com/n4demo/learn-to-containerise/tree/main/docker-apps/linux/python-basic
