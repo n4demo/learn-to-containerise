@@ -39,7 +39,7 @@ docker run -it --rm -p 5014:80 --name webforms node4demo/webforms:v3
 docker ps -a 
 ```
 
-8. Gain a command shell into the running container and list the directories
+8. Gain a command shell into the running container and list the directories and logs
 
 ```
 docker exec -it  ContainerID 
@@ -47,6 +47,8 @@ docker exec -it  ContainerID
 dir
 
 curl localhost/index.html
+
+docker logs webforms
 ```
 
 9. run in browser
