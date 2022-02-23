@@ -1,4 +1,5 @@
-# Python Web App
+# Python Web App (Flask)
+
 ## This exercise shows how to containerise a very simple Python web application using VS Code and Docker Desktop and uploading to DockerHub. 
 
 1. In VS Code File..Open Folder - navigate to docker-apps/linux/python-standard folder, so that the DOCKER file is in the current directory. 
