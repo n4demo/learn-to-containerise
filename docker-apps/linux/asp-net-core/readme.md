@@ -22,7 +22,7 @@ docker image ls node4demo/aspnetapp:my-name
 3. Use 'docker scan' to run Snyk tests against images to find any critical vulnerabilities and learn how to fix them.
 
 ```
-docker scan node4demo/aspnetapp:my-name
+docker scan node4demo/aspnetapp:my-name 
 ```
 
 8. run the local image with 500MB memory 
