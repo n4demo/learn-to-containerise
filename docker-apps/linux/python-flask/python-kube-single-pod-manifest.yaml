@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: Pod
-metadata:
-  name: python
-spec:
-  containers:
-  - name: python
-    image: node4demo/python-standard:v1.0.0
-    imagePullPolicy: Always
