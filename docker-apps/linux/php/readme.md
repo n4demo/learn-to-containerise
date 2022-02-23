@@ -31,7 +31,7 @@ docker scan node4demo/php-app:liverpool
 6. run the local image with 200MB memory, 
 
 ```
-docker container run -m 200M -it --rm  --name php-app -p 5002:80 node4demo/php-app:liverpool
+docker container run -m 200M -it --rm  --name php-app -p 5002:80 node4demo/php-app:my-name-here
 ```
 
 7. From a new BASH Terminal run the code:
