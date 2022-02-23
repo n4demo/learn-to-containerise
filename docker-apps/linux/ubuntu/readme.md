@@ -16,6 +16,14 @@
 ```
 docker image build . -t node4demo/ubuntu-test:my-name-here -f Dockerfile
 ```
+
+### Here is the Docker code that you have just built
+
+```
+FROM ubuntu
+CMD echo "hi "$NAME", you have been succesful in containerising and running this simple Ubuntu application.\n" 
+```
+
 #### How long does it take?
 
 5. Build the image again. 
@@ -102,9 +110,8 @@ docker push node4demo/ubuntu-test:my-name-here
 
 19. now view in DockerHub in browser by signing in as: node4demo 
 
-```
 https://hub.docker.com
-```
+
 
 20. drill into app to see the tags
 
@@ -112,9 +119,6 @@ https://hub.docker.com
 
 21. In VS Code: File..Open Folder ..docker-apps\linux\php
 
-
 22. go to 
 
-```
 https://github.com/n4demo/learn-to-containerise/blob/main/docker-apps/linux/php/readme.md
-```

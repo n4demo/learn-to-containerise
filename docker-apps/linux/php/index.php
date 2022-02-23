@@ -11,19 +11,15 @@
   <?php 
 
     $ip =getenv("REMOTE_ADDR");
-
     echo "IP address running in docker: $ip";
-
     $i = 0;
     while($i < 5)
     {
       $i++;
       echo "<div>some php code: $i </div>";
     }
-  
   ?>
   
-
 </h1>
    <img src="images/php.png" />
 
