@@ -43,9 +43,9 @@ docker container logs php-app
 ```
 
 8. run in browser
-```
+
 http://localhost:5002
-```
+
 
 9. login to DockerHub
 
@@ -53,7 +53,7 @@ http://localhost:5002
 docker login --username node4demo -p my-password
 ```
 
-### upload to Container Registry
+### Upload to Docker Container Registry
 
 10. push the image to docker hub container registry
 
@@ -94,6 +94,5 @@ docker rmi $(docker images -q)
 
 16. In browser: 
 
-```
 https://github.com/n4demo/learn-to-containerise/tree/main/docker-apps/linux/python-basic
-```
+

@@ -33,7 +33,7 @@ docker container run --name python_basic --rm -i -t node4demo/python-basic:my-na
 docker ps -a
 ```
 
-7. show logs for this container - why did it fail?
+7. show logs for this container
 
 ```
 docker logs -f node4demo/python-basic:my-name-here
@@ -51,12 +51,11 @@ docker login --username node4demo -p my-password
 docker push node4demo/python-basic:my-name-here
 ```
 
-### Congratulations.. now let's containerise our first python web application.
+### Congratulations.. now let's containerise our first python web (Flask) application.
 
-10. In VS Code: File..Open Folder ..docker-apps\linux\python-standard
+10. In VS Code: File..Open Folder ..docker-apps\linux\python-flask
 
-```
-https://github.com/n4demo/learn-to-containerise/tree/main/docker-apps/linux/python-standard
-```
+https://github.com/n4demo/learn-to-containerise/tree/main/docker-apps/linux/python-flask
+
 
 
