@@ -38,13 +38,13 @@ exit
 docker run -it -d --rm -p 5014:80 --name webforms node4demo/webforms:v3
 ```
 
-7. Obtain the ContainerID
+8. Obtain the ContainerID
 
 ```
 docker ps -a 
 ```
 
-8. Gain a command shell into the running container and list the directories and logs
+9. Gain a command shell into the running container and list the directories and logs
 
 ```
 docker exec -it  ContainerID cmd
@@ -56,7 +56,7 @@ curl localhost/index.html
 docker logs webforms
 ```
 
-9. run in browser
+10. run in browser
 
 *http://localhost:5014*
 
