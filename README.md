@@ -5,7 +5,6 @@
 # Audience
 Developers, Solution Architects
 
-
 # Migrating web applications into Docker images
 The purpose of this training course is to remove the magic associated with containerising an application, running and deploying to a container registry.
 This course shows how to containerise:
@@ -17,15 +16,13 @@ This course shows how to containerise:
 - NodeJS
 - Java
 - ASP.NET Core (Linux)
-- ASP.NET (Windows)
+- Legacy ASP.NET Webforms (Windows)
 
 ## Prerequisites
 
 1. Gain admin rights to your laptop
-2. (Optional) Download and install GIT onto your laptop
-3. Download and install VS Code onto your laptop  
-4. Download and install Docker Desktop onto your laptop  
-5. Double click on fve.reg to allow you to switch between running Linux and Windows containers
+2. Download and install VS Code onto your laptop  https://code.visualstudio.com/download
+3. Download and install Docker Desktop onto your laptop https://docs.docker.com/desktop/windows/install/ 
 
 A possible rebot may be beneficial.  
 
@@ -58,7 +55,9 @@ A possible rebot may be beneficial.
 
 ## Start lab
 15. In VS Code File...Open Folder.. c:\docker\docker-root\docker-apps\linux\ubuntu
-16. Right click on README.md and select Open Preview. OR use the link ttps://github.com/n4demo/learn-to-containerise/blob/main/docker-apps/linux/ubuntu/readme.md
+
+16. Right click on README.md and select Open Preview. OR use the link ttps://github.com/n4demo/learn-to-containerise/blob/main/docker-apps/linux/ubuntu/readme.md 
+
 
 
 
