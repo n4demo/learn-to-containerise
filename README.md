@@ -39,7 +39,7 @@ A possible rebot may be beneficial.
 10. create a new folder e.g: c:\docker
 11. using Windows Explorer navigate to this above or chosen folder
 12. either, right click for a Bash Git command and paste in: *git clone https://github.com/n4demo/learn-to-containerise*
-13. or, download the zip file, extract and copy to your above floder
+13. or, download the zip file, extract and copy to your above folder
 
 ## (Optional) to save download time in lab
 14. To download base images\layers (on wifi) to speed things up when building Docker images, open a terminal in VS Code or command prompt and run:
