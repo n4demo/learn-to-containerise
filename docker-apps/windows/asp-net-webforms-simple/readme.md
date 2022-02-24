@@ -2,7 +2,7 @@
 
 1. Switch to run Windows Containers by right clicking Docker (Whale) icon in system tray - Switch to Windows containers 
 
-### Containers feature is disabled. Enable it using the PowerShell script (in an administrative PowerShell) and restart your computer before using Docker Desktop: 
+### Containers feature is disabled. For older versions of Windows that predates WSL2, enable it using the PowerShell script (in an administrative PowerShell) and restart your computer before using Docker Desktop: 
 
 ```
 Enable-WindowsOptionalFeature -Online -FeatureName $("Microsoft-Hyper-V", "Containers") -All
@@ -21,16 +21,21 @@ docker image build . -t node4demo/webforms:v3 -f ./webformsbasic/Dockerfile
 
 ### If you receive this error: 'This error may indicate that the docker daemon is not running.' - switch to Windows Containers
 
-5. Look inside the container at the folder structure
+5. run the container and gain a command prompt
+6. User dir to view file structure
 
 ```
-docker run -it --rm --entrypoint powershell --name webforms node4demo/webforms:v3 ls 
+docker run -it --rm --entrypoint powershell --name webforms-powershell node4demo/webforms:v3 cmd 
+
+dir inetpub\wwwroot
+
+exit
 ```
 
-6. Run the Webforms app
+7. Run the Webforms web app
 
 ```
-docker run -it --rm -p 5014:80 --name webforms node4demo/webforms:v3
+docker run -it -d --rm -p 5014:80 --name webforms node4demo/webforms:v3
 ```
 
 7. Obtain the ContainerID
