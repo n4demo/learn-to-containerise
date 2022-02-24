@@ -49,15 +49,14 @@ A possible rebot may be beneficial.
 * docker pull python:3.6  
 * docker pull python:3.6-alpine  
 * docker pull php:apache  
-* docker pull mcr.microsoft.com/dotnet/core/aspnet:3.0  
-* docker pull mcr.microsoft.com/dotnet/core/sdk:3.0  
-* docker pull microsoft/aspnet:4.7.2-windowsservercore-1803  
+* docker pull mcr.microsoft.com/dotnet/core/aspnet:3.0-buster-slim  
+* docker pull mcr.microsoft.com/dotnet/core/sdk:3.0-buster  
+* docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.8  
+* docker pull node:12
+* docker pull java:8
+* docker pull golang:1.12-alpine
 
 ## Start lab
 15. In VS Code File...Open Folder.. c:\docker\docker-root\docker-apps\linux\ubuntu
 
 16. Right click on README.md and select Open Preview. OR use the link https://github.com/n4demo/learn-to-containerise/blob/main/docker-apps/linux/ubuntu/readme.md 
-
-
-
-
