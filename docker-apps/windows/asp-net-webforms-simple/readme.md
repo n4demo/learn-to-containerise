@@ -27,7 +27,7 @@ docker image build . -t node4demo/webforms:v3 -f ./webformsbasic/Dockerfile
 ```
 docker run -it --rm --entrypoint powershell --name webforms-powershell node4demo/webforms:v3 cmd 
 
-dir inetpub\wwwroot
+dir inetpub\wwwroot 
 
 exit
 ```
