@@ -5,7 +5,7 @@
 # Audience
 Developers, Solution Architects
 
-# Migrating web applications into Docker images
+# Migrating Applications into Docker images
 The purpose of this training course is to remove the magic associated with containerising an application, running and deploying to a container registry.
 This course shows how to containerise:
 
