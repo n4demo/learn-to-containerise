@@ -1,8 +1,8 @@
 # ASP.NET Core v3 (.NET Core)
-### This exercise shows how to containerise a very simple .NET web application using VS Code and Docker Desktop and uploading to DockerHub.  
+### This exercise shows how to containerise a .NET Core web application using a multi-stage Docker file.  
 
 1. Important - Set your VS Code folder or terminal current directory so that the DOCKER file is in the current directory.
-2. create the local image by OPENING a NEW VS CODE BASH TERMINAL WINDOW and paste in the docker image build code below and edit your name. 
+2. create the local image by OPENING a NEW VS CODE BASH TERMINAL WINDOW and paste in the 'docker image build' code below and edit your name. 
 - run the 2 base images to download the images from MS imgage registry
 - node4demo refers to container registry account or owner that already exists
 - aspnetapp:my-name refers to the application 
@@ -33,9 +33,7 @@ docker run -it -m 500M  --rm -p 85:8080 --name aspnetapp node4demo/aspnetapp:my-
 
 9. run in browser
 
-
 http://localhost:85*
-
 
 10. Review the logs
 
@@ -64,4 +62,8 @@ docker login --username node4demo -p my-password
 ```
 docker push node4demo/aspnetapp:my-name
 ```
+
+### Congratulations.. now let's containerise our first .NET Framework ASP.NET Webforms application:
+
+15. In VS Code: File..Open Folder ..docker-apps\windows\asp-net-webforms-simple
 

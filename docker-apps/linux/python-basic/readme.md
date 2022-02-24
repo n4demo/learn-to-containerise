@@ -55,7 +55,5 @@ docker push node4demo/python-basic:my-name-here
 
 10. In VS Code: File..Open Folder ..docker-apps\linux\python-flask
 
-https://github.com/n4demo/learn-to-containerise/tree/main/docker-apps/linux/python-flask
-
 
 

@@ -3,7 +3,7 @@
 ## This exercise shows how to containerise a very simple Python web application using VS Code and Docker Desktop and uploading to DockerHub. 
 
 1. In VS Code File..Open Folder - navigate to docker-apps/linux/python-standard folder, so that the DOCKER file is in the current directory. 
-2. create the local image by OPENING a NEW VS CODE BASH TERMINAL WINDOW and paste in the docker image build code from browser and edit your name.
+2. create the local image by OPENING a NEW VS CODE BASH TERMINAL WINDOW and paste in the docker image build code and edit your name.
 
 - node4demo refers to container registry account or owner that already exists
 - php refers to the application 
@@ -81,7 +81,3 @@ http://localhost:5501
 ### Congratulations.. now let's containerise our first MS ASP.NET Core web application.
 
 13. In VS Code: File..Open Folder ..docker-apps\linux\asp-net-core
-
-```
-https://github.com/n4demo/learn-to-containerise/tree/main/docker-apps/linux/asp-net-core
-```
