@@ -14,10 +14,10 @@
 docker image build . -t node4demo/php-app:my-name-here
 ```
 
-3. add additional tags to the same image by rebuilding image
+3. add additional tags to the same image
 
 ```
-docker build . -t node4demo/php-app:liverpool -t node4demo/php-app:1.0.0
+docker image tag . -t node4demo/php-app:liverpool -t node4demo/php-app:1.0.0
 ```
 
 4. Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them.
