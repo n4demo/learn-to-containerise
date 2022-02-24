@@ -56,7 +56,7 @@ A possible rebot may be beneficial.
 ## Start lab
 15. In VS Code File...Open Folder.. c:\docker\docker-root\docker-apps\linux\ubuntu
 
-16. Right click on README.md and select Open Preview. OR use the link ttps://github.com/n4demo/learn-to-containerise/blob/main/docker-apps/linux/ubuntu/readme.md 
+16. Right click on README.md and select Open Preview. OR use the link https://github.com/n4demo/learn-to-containerise/blob/main/docker-apps/linux/ubuntu/readme.md 
 
 
 
