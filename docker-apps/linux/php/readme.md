@@ -2,7 +2,7 @@
 # PHP
 ## This exercise shows how to containerise a very simple PHP Apache web application using VS Code terminal with Docker Desktop, then uploading to DockerHub.  
 
-1. In VS Code File..Open Folder - navigate to docker-apps/linux/php folder, so that the DOCKER file is in the current directory. 
+1. In VS Code File..Open Folder - navigate to docker-apps/linux/php folder, so that the DOCKER file is in the current directory. Open readme.md in Preview.
 2. create the local image by OPENING a NEW VS CODE BASH TERMINAL WINDOW and paste in the docker image build code and edit your name. 
 
 - node4demo refers to container registry account or owner that already exists
@@ -28,13 +28,13 @@ docker scan node4demo/php-app:liverpool
 
 5. how many vulnerabilities does it have? Is there a base image with no vulnerabilities?
 
-6. run the local image with 200MB memory, 
+6. run the local image with 200MB memory and map your laptops port 5002 to port 80 on the container, 
 
 ```
 docker container run -m 200M -it --rm  --name php-app -p 5002:80 node4demo/php-app:my-name-here
 ```
 
-7. From a new BASH Terminal run the code:
+7. From a new VS BASH Terminal run the code:
 
 ```
 docker container list
@@ -64,7 +64,7 @@ docker push node4demo/php-app:liverpool
 ```
 11. Question: Why does it take so very little time to upload to DockerHub?
 
-12. Optionally - login to GitHub container registry (GHCR)
+12. If available - login to GitHub container registry (GHCR) or just review code
 
 ```
 docker login ghcr.io -u n4demo -p my-password
