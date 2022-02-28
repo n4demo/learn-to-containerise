@@ -1,7 +1,21 @@
-#Depending on the operating system of the host machines(s) that will build or run the containers, the image specified in the FROM statement may need to be changed.
-#For more information, please see http://aka.ms/containercompat 
+# escape=`
+FROM mcr.microsoft.com/dotnet/framework/sdk:4.8 AS builder
 
-FROM microsoft/aspnet:4.7.2-windowsservercore-1803
-ARG source
-WORKDIR /inetpub/wwwroot
-COPY ${source:-obj/Docker/publish} .
+WORKDIR C:\src
+COPY c#\wingtiptoys.sln .
+COPY c#\wingtiptoys\wingtiptoys.csproj .\wingtiptoys\
+RUN nuget restore wingtiptoys.sln
+
+COPY c# C:\src
+RUN msbuild wingtiptoys\wingtiptoys.csproj /p:OutputPath=c:\out /p:Configuration=Release
+
+# app image
+FROM mcr.microsoft.com/dotnet/framework/aspnet:4.8
+SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop';"]
+
+ENV APP_ROOT=C:\web-app
+
+WORKDIR ${APP_ROOT}
+RUN New-WebApplication -Name 'app' -Site 'Default Web Site' -PhysicalPath $env:APP_ROOT
+
+COPY --from=builder C:\out\_PublishedWebsites\wingtiptoys ${APP_ROOT}
