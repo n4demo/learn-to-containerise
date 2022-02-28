@@ -58,7 +58,7 @@ docker container run --detach --tty --env NAME=my-name-here --name ubuntu-contai
 docker ps
 ```
 
-8. Use the ContainerID to access and run a shell prompt in the container. With a few Linux commands, see how easy (and insecure) it is to navigate. Determine the running account. Install utilities into the container. What happens to the utilities after the container is stopped - where are they?
+8. Use the ContainerID to access and run a shell prompt in the container. With a few Linux commands: navigate the file structure, determine the running account, install Curl command into the container. What happens to the upgrade and Curl after the container is stopped - where are they?
 
 ```
 docker exec --interactive -t ContainerID sh
