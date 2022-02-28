@@ -51,6 +51,7 @@ A possible rebot may be beneficial.
 * docker pull php:apache  
 * docker pull mcr.microsoft.com/dotnet/core/aspnet:3.0-buster-slim  
 * docker pull mcr.microsoft.com/dotnet/core/sdk:3.0-buster  
+* docker pull mcr.microsoft.com/dotnet/framework/sdk:4.8
 * docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.8  
 * docker pull node:12
 * docker pull java:8
