@@ -2,12 +2,6 @@
 
 1. Switch to run Windows Containers by right clicking Docker (Whale) icon in system tray - Switch to Windows containers 
 
-### Containers feature is disabled. For older versions of Windows that predates WSL2, enable it using the PowerShell script (in an administrative PowerShell) and restart your computer before using Docker Desktop: 
-
-```
-Enable-WindowsOptionalFeature -Online -FeatureName $("Microsoft-Hyper-V", "Containers") -All
-```
-
 3. open a new terminal and download base images - and go and get a coffee
 
 ```
@@ -53,9 +47,7 @@ docker exec -it  ContainerID cmd
 
 dir
 
-curl localhost/index.html
-
-docker logs webforms
+curl localhost:5016/
 ```
 
 10. run in browser
