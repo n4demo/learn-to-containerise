@@ -17,6 +17,8 @@
 docker image build . -t node4demo/ubuntu-test:my-name-here -f Dockerfile
 ```
 
+#### If you receive: docker: image operating system "linux" cannot be used on this platform. Switch Docker to use Linux containers
+
 ### Here is the Docker code that you have just built
 
 ```
@@ -34,8 +36,14 @@ CMD echo "hi "$NAME", you have been succesful in containerising and running this
 
 ```
 docker container run --env NAME=my-name-here --name ubuntu-container --rm  node4demo/ubuntu-test:my-name-here
+```
 
+#### if you receive error: The container name "/ubuntu-container" is already in use by container "0b2.. then run 
+
+```
 docker ps
+
+docker stop ContainerID
 ```
 
 7. run the local image again - and keep it running. 
@@ -50,14 +58,20 @@ docker container run -d -t --env NAME=my-name-here --name ubuntu-container --rm 
 docker ps
 ```
 
-8. Use the ContainerID to run the BASH executable to show a command prompt in the container. Navigate around in the running image file system
+8. Use the ContainerID to access and run a shell prompt in the container. With a few Linux commands, see how easy (and insecure) it is to navigate. Determine the running account. Install utilities into the container. What happens to the utilities after the container is stopped - where are they?
 
 ```
-docker exec -it ContainerID bash
+docker exec -it ContainerID sh
 
 ls
 
 whoami
+
+apt update && apt upgrade && apt install curl
+
+curl --version
+
+curl google.com
 
 exit
 ```
