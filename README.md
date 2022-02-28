@@ -5,6 +5,11 @@
 # Audience
 Developers, Solution Architects
 
+### Look up this course!!! https://www.udemy.com/course/docker4dotnet/
+
+
+
+
 # Migrating Applications into Docker images
 The purpose of this training course is to remove the magic associated with containerising an application, running and deploying to a container registry.
 This course shows how to containerise:
@@ -61,3 +66,6 @@ A possible rebot may be beneficial.
 15. In VS Code File...Open Folder.. c:\docker\docker-root\docker-apps\linux\ubuntu
 
 16. Right click on README.md and select Open Preview. OR use the link https://github.com/n4demo/learn-to-containerise/blob/main/docker-apps/linux/ubuntu/readme.md 
+
+
+
