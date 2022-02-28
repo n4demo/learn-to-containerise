@@ -43,13 +43,13 @@ docker container run --env NAME=my-name-here --name ubuntu-container --rm  node4
 ```
 docker ps
 
-docker stop ContainerID
+docker stop ubuntu-container
 ```
 
 7. run the local image again - and keep it running. 
 
 ```
-docker container run -d -t --env NAME=my-name-here --name ubuntu-container --rm  node4demo/ubuntu-test:my-name-here sleep infinity
+docker container run --detach --tty --env NAME=my-name-here --name ubuntu-container --rm  node4demo/ubuntu-test:my-name-here sleep infinity
 ```
 
 7b. Now run docker ps again to see if the container is still running. View the ContainerID
@@ -61,7 +61,7 @@ docker ps
 8. Use the ContainerID to access and run a shell prompt in the container. With a few Linux commands, see how easy (and insecure) it is to navigate. Determine the running account. Install utilities into the container. What happens to the utilities after the container is stopped - where are they?
 
 ```
-docker exec -it ContainerID sh
+docker exec --interactive -t ContainerID sh
 
 ls
 
@@ -70,6 +70,8 @@ whoami
 apt update && apt upgrade && apt install curl
 
 curl --version
+
+curl localhost
 
 curl google.com
 
