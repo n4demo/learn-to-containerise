@@ -131,6 +131,6 @@ https://hub.docker.com
 
 20. drill into app to see the tags
 
-### Congratulations.. that was easy..now let's containerise our first web application (PHP).
+### Congratulations....now let's containerise our first web application (PHP).
 
 21. In VS Code: File..Open Folder ..docker-apps\linux\php
