@@ -49,18 +49,20 @@ A possible rebot may be beneficial.
 ## (Optional) to save download time in lab
 14. To download base images\layers (on wifi) to speed things up when building Docker images, open a terminal in VS Code or command prompt and run:
 
-* docker pull ubuntu  
-* docker pull python  
-* docker pull python:3.6  
-* docker pull python:3.6-alpine  
-* docker pull php:apache  
-* docker pull mcr.microsoft.com/dotnet/core/aspnet:3.0-buster-slim  
-* docker pull mcr.microsoft.com/dotnet/core/sdk:3.0-buster  
-* docker pull mcr.microsoft.com/dotnet/framework/sdk:4.8
-* docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.8  
-* docker pull node:12
-* docker pull java:8
-* docker pull golang:1.12-alpine
+```
+docker pull ubuntu  
+docker pull python  
+docker pull python:3.6  
+docker pull python:3.6-alpine  
+docker pull php:apache  
+docker pull mcr.microsoft.com/dotnet/core/aspnet:3.0-buster-slim  
+docker pull mcr.microsoft.com/dotnet/core/sdk:3.0-buster  
+docker pull mcr.microsoft.com/dotnet/framework/sdk:4.8
+docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.8  
+docker pull node:12
+docker pull java:8
+docker pull golang:1.12-alpine
+```
 
 ## Start lab
 15. In VS Code File...Open Folder.. c:\docker\docker-root\docker-apps\linux\ubuntu
