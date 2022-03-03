@@ -11,19 +11,19 @@
 - . (dot) refers to the current directory (assuming the current directory has th app code and Docker file
 
 ```
-docker image build -t node4demo/python-standard:my-name-here .
+docker image build -t node4demo/python-flask:my-name-here .
 ```
 
 3. add 3 additional tags to the same image by rebuilding image. Note we add a version.
 
 ```
-docker build -t node4demo/python-standard:v1.0.0 -t node4demo/python-standard -t node4demo/python-standard:latest .
+docker build -t node4demo/python-flask:v1.0.0 -t node4demo/python-flask -t node4demo/python-flask:latest .
 ```
 
 4. run the local image in a container hosted in a Linux VM hosted on your laptop
 
 ```
-docker container run --name python-web-app --rm -i -t -p 5001:5000 node4demo/python-standard:my-name-here
+docker container run --name python-web-app --rm -i -t -p 5001:5000 node4demo/python-flask:my-name-here
 ```
 
 ### What port on the CONTAINER hads been opened to receive traffic?
@@ -65,11 +65,7 @@ docker login --username node4demo -p my-password
 11. push the image to DockerHub - make sure you have built this image with the tag specified below
 
 ```
-docker push node4demo/python-standard:v1.0.0
-```
-
-```
-docker push node4demo/python-standard:latest
+docker push node4demo/python-flask:v1.0.0
 ```
 
 12. (Optional) Edit the python file so that the python web app is listening on port 5500 and the container can expose this port. Hint edit the app.py file. Now try and re-run the app so that in you browser it work at 
