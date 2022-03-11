@@ -46,10 +46,10 @@ docker ps
 docker stop ubuntu-container
 ```
 
-7. run the local image again - and keep it running. 
+7. run the local image again - in the background, as non root (admin) user, adding a capability, keeping it running. 
 
 ```
-docker container run --detach --tty --env NAME=my-name-here --name ubuntu-container --rm  node4demo/ubuntu-test:my-name-here sleep infinity
+docker container run --detach --tty --user=1001 --cap-add MAC_ADMIN --env NAME=my-name-here --name ubuntu-container --rm  node4demo/ubuntu-test:my-name-here sleep 3600
 ```
 
 7b. Now run docker ps again to see if the container is still running. View the ContainerID
