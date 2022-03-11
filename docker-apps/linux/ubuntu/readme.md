@@ -82,6 +82,8 @@ exit
 
 ```
 docker stop ubuntu-container
+
+docker history node4demo/ubuntu-test:my-name-here
 ```
 10. Review the Dockerfile on LHS and try and understand what it is doing. What is the base image specified?
 
