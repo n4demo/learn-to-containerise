@@ -41,7 +41,7 @@ docker container run --env NAME=my-name-here --name ubuntu-container --rm  node4
 #### if you receive error: The container name "/ubuntu-container" is already in use by container "0b2.. then run 
 
 ```
-docker ps
+docker ps 
 
 docker stop ubuntu-container
 ```
