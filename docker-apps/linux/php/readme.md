@@ -17,7 +17,7 @@ docker image build . -t node4demo/php-app:my-name-here
 3. add additional tags to the same image
 
 ```
-docker image tag . -t node4demo/php-app:liverpool -t node4demo/php-app:1.0.0
+docker image build . -t node4demo/php-app:liverpool -t node4demo/php-app:1.0.0
 ```
 
 4. Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them.
@@ -31,7 +31,7 @@ docker scan node4demo/php-app:liverpool
 6. run the local image with 200MB memory, 0.25 of CPU and map your laptops port 5002 to port 80 on the container, 
 
 ```
-docker container run -m 200M  --cpus=0.25 -it --rm  --name php-app -p 5002:80 node4demo/php-app:my-name-here
+docker container run -m 200M  --cpus=0.25 -it --rm  --name php-app -p 5002:80 node4demo/php-app:liverpool
 ```
 
 7. From a new VS BASH Terminal run the code:
@@ -58,8 +58,9 @@ docker login --username node4demo -p my-password
 10. push the image to docker hub container registry
 
 ```
-docker push node4demo/php-app:latest
 docker push node4demo/php-app:my-name-here
+```
+```
 docker push node4demo/php-app:liverpool
 ```
 11. Question: Why does it take so very little time to upload to DockerHub?
