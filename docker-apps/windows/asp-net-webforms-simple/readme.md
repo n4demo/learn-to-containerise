@@ -1,5 +1,7 @@
 # ASP.NET. .Net Framework (Windows)
 
+## This example shows how published (unchanged) ASP.NET Webforms files can be copied into the default wwwroot folder in a container and executed.
+
 1. Switch to run Windows Containers by right clicking Docker (Whale) icon in system tray - Switch to Windows containers 
 
 ### Containers feature is disabled. For older versions of Windows that predates WSL2, enable it using the PowerShell script (in an administrative PowerShell) and restart your computer before using Docker Desktop: 
