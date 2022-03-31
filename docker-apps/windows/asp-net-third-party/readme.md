@@ -6,8 +6,8 @@
 
 ```
 docker pull mcr.microsoft.com/dotnet/framework/sdk:4.8
-
 docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.8
+pwd
 ```
 
 4. now build the image
@@ -22,9 +22,13 @@ docker image build . -t node4demo/web:test -f ./Dockerfile
 
 ```
 docker run -it --rm --entrypoint powershell --name web-test node4demo/web:test cmd 
+```
 
+```
 dir C:\
+```
 
+```
 exit
 ```
 
