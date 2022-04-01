@@ -5,10 +5,12 @@ WORKDIR C:\src
 CMD mkdir wingtiptoys
 COPY c#\wingtiptoys.sln .
 COPY c#\wingtiptoys\wingtiptoys.csproj .\wingtiptoys\
-RUN nuget restore c:\src\wingtiptoys\wingtiptoys.csproj -Force
+#RUN nuget restore c:\src\wingtiptoys\wingtiptoys.csproj -Force -NoCache -Recursive
+
+RUN dotnet restore c:\src\wingtiptoys\wingtiptoys.csproj
 
 COPY C# C:\src
-RUN msbuild wingtiptoys\wingtiptoys.csproj /p:OutputPath=c:\out /p:Configuration=Release
+RUN msbuild  wingtiptoys\wingtiptoys.csproj  /p:OutputPath=c:\out /p:Configuration=Release
 
 FROM mcr.microsoft.com/dotnet/framework/aspnet:4.8
 COPY --from=builder C:\out\_PublishedWebsites\wingtiptoys c:/inetpub/wwwroot
