@@ -62,4 +62,19 @@ docker logs webforms
 
 *http://localhost:5014*
 
+login to DockerHub
+
+```
+docker login --username node4demo -p my-password
+```
+
+### Upload to Docker Container Registry
+
+10. push the image to docker hub container registry
+
+```
+docker push node4demo/webforms:v3
+```
+
+
 
