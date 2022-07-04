@@ -21,6 +21,10 @@ docker pull mcr.microsoft.com/dotnet/framework/aspnet:4.8
 docker image build . -t node4demo/webforms:v3
 ```
 
+```
+docker image build . -t node4demo/specs:v3
+```
+
 ### If you receive this error: 'This error may indicate that the docker daemon is not running.' - switch to Windows Containers
 
 5. run the container and gain a command prompt
@@ -38,6 +42,10 @@ exit
 
 ```
 docker run -it -d --rm -p 5014:80 --name webforms node4demo/webforms:v3
+```
+
+```
+docker run -it -d --rm -p 5014:80 --name specs node4demo/specs:v3
 ```
 
 8. Obtain the ContainerID
