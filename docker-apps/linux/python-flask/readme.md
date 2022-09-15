@@ -14,23 +14,25 @@
 docker image build -t node4demo/python-flask:my-name-here .
 ```
 
-3. add 3 additional tags to the same image by rebuilding image. Note we add a version.
+3. Add 3 additional tags to the same image by rebuilding image. Note we add a version.
 
 ```
 docker build -t node4demo/python-flask:v1.0.0 -t node4demo/python-flask -t node4demo/python-flask:latest .
 ```
 
-4. run the local image in a container hosted in a Linux VM hosted on your laptop
+4. Run the local image in a container hosted in a Linux VM hosted on your laptop, limiting the resources to the container
 
 ```
-docker container run --name python-web-app --rm -i -t -p 5001:5000 node4demo/python-flask:my-name-here
+docker container run --name python-web-app -m 200M  --cpus=0.25 --rm -i -t -p 5001:5000 node4demo/python-flask:my-name-here
 ```
 
 ### What port on the CONTAINER hads been opened to receive traffic?
 
 ### What port on your laptop has has been set to forward to the open port on the container?
 
-### Open a new BASH terminal to view HTML code returned from the web app by entering the command:
+### How much CPU and RAM has been allocated to the container?
+
+5. Open a new BASH terminal to view HTML code returned from the web app by entering the command:
 
 ```
 curl localhost:5001
@@ -42,13 +44,13 @@ curl localhost:5001
 http://localhost:5001
 ```
 
-7. open a new BASH terminal window and run docker ps
+7. Open a new BASH terminal window and run docker ps
 
 ```
 docker ps
 ```
 
-8. from 2nd BASH terminal window, list all running containers
+8. From the 2nd BASH terminal window, list all running containers
 
 ```
 docker container ls -aq
@@ -56,19 +58,19 @@ docker container ls -aq
 
 9. From the keyboard to shut down the container (from first terminal): CTL C 
 
-10. login to DockerHub
+10. Login to DockerHub from the terminal
 
 ```
 docker login --username node4demo -p my-password
 ```
 
-11. push the image to DockerHub - make sure you have built this image with the tag specified below
+11. Push (upload) the image to DockerHub - make sure you have built this image with the tag specified below
 
 ```
 docker push node4demo/python-flask:v1.0.0
 ```
 
-12. (Optional) Edit the python file so that the python web app is listening on port 5500 and the container can expose this port. Hint edit the app.py file. Now try and re-run the app so that in you browser it work at 
+12. (Optionally). Edit the python file so that the python web app is listening on port 5500 and the container can expose this port. Hint edit the app.py file. Now try and re-run the app so that in you browser it work at 
 
 ```
 http://localhost:5501
