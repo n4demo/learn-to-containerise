@@ -1,6 +1,7 @@
 
-# PHP
-## This exercise shows how to containerise a very simple PHP Apache web application using VS Code terminal with Docker Desktop, then uploading to DockerHub.  
+# PHP running on Apache Web Server
+## This exercise shows how to containerise a very simple PHP Apache web application using VS Code terminal with Docker Desktop. We then run the container with predefined resources. Additionally we can scan the image with Snyk and view any vulnerabilities and update to a alternate base image. Finally, uploading to DockerHub.  
+##
 
 1. In VS Code File..Open Folder - navigate to docker-apps/linux/php folder, so that the DOCKER file is in the current directory. Open readme.md in Preview.
 2. create the local image by OPENING a NEW VS CODE BASH TERMINAL WINDOW and paste in the docker image build code and edit your name. 
