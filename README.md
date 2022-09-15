@@ -62,7 +62,9 @@ docker pull golang:1.12-alpine
 ```
 
 ## Start lab
-15. In VS Code File...Open Folder.. c:\docker\docker-root\docker-apps\linux\ubuntu
+15. In VS Code File...Open Folder.. c:\docker\docker-root\docker-apps\linux\ubuntu..  or
+https://github.com/n4demo/learn-to-containerise/tree/main/docker-apps/linux/ubuntu
+
 
 
 
