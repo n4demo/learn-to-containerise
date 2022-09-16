@@ -33,8 +33,7 @@ CMD while sleep 1; do echo ":-) Hi " $NAME ". My name is: "$(hostname) ". I am a
 
 #### How long does it take now - why?
 
-6. now run the local image in a container hosted in a Linux VM hosted on your laptop, limiting the memeory and CPU. Don't forget to edit your name.
-
+6. Now run the local image in a container hosted in a Linux VM hosted on your laptop, limiting the memory to 200MB and CPU to 1/4. Don't forget to edit your name. Note: env means pass in an external environmental variable into the container (your name). 
 ```
 docker container run --env NAME=my-name-here --name ubuntu --rm -m 200M  --cpus=0.25  node4demo/ubuntu-test:my-name-here
 ```
