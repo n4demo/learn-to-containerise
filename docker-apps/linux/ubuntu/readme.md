@@ -20,11 +20,11 @@ docker image build . -t node4demo/ubuntu-test:my-name-here -f Dockerfile
 
 #### If you receive: docker: image operating system "linux" cannot be used on this platform. Switch Docker to use Linux containers
 
-### Here is the Docker code that you have just built
+### Here is the Docker code that you have used to build a container image:
 
 ```
 FROM ubuntu
-CMD while sleep 1; do echo ":-) Hi " $NAME ". My name is: "$(hostname) ". I am a running container! The time is: " $(date); done
+CMD while sleep 5; do echo ":-) Hi " $NAME ". My name is: "$(hostname) ". I am a running container! The time is: " $(date); done
 ```
 
 #### How long does it take?
@@ -46,22 +46,22 @@ docker ps
 docker stop ubuntu
 ```
 
-7. This time, run the local image again - in the background, as non root (admin) user, adding a networking capability, keeping it running. 
+7. This time, run the local image again - in the background, continue as root (admin) user, adding a networking capability. 
 
 ```
-docker container run --detach --tty --user=1001 --cap-add MAC_ADMIN --env NAME=my-name-here --name ubuntu-container --rm  node4demo/ubuntu-test:my-name-here sleep 3600
+docker container run --detach --tty --user=0 --cap-add MAC_ADMIN --env NAME=my-name-here --name ubuntu --rm  node4demo/ubuntu-test:my-name-here sleep 3600
 ```
 
-7b. Now run docker ps again to see if the container is still running. View the ContainerID
+7b. Now run docker ps in another terminal to see if the container is still running. View the ContainerID
 
 ```
 docker ps
 ```
 
-8. Use the ContainerID to access and run a shell (command) prompt in the container. With a few Linux commands: navigate the file structure, determine the running account, install Curl command into the container. What happens to the upgrade and Curl after the container is stopped - where are they?
+8. Use the ContainerID to access and run a shell (command) prompt in the container. With a few Linux commands: navigate the file structure, determine the running account. Try and install Curl command into the container - will this work as non root user? If not run again as root user. What happens to the upgrade and Curl after the container is stopped - where are they? 
 
 ```
-docker exec --interactive -t ContainerID sh
+docker exec -it <CONTAINERID> sh
 
 ls
 
