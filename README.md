@@ -65,6 +65,6 @@ docker pull golang:1.12-alpine
 15. In VS Code File...Open Folder.. c:\docker\docker-root\docker-apps\linux\php..  or
 https://github.com/n4demo/learn-to-containerise/tree/main/docker-apps/linux/php
 
-###Note: To understand more about connecting to live running containers, review the Ubuntu exercises.
+### Note: To understand more about connecting to live running containers, review the Ubuntu exercises.
 
 
