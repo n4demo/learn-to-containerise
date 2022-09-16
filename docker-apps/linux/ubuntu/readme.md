@@ -24,7 +24,7 @@ docker image build . -t node4demo/ubuntu-test:my-name-here -f Dockerfile
 
 ```
 FROM ubuntu
-CMD echo "hi "$NAME", you have been succesful in containerising and running this simple Ubuntu application.\n" 
+CMD while sleep 1; do echo ":-) Hi " $NAME ". My name is: "$(hostname) ". I am a running container! The time is: " $(date); done
 ```
 
 #### How long does it take?
@@ -36,15 +36,15 @@ CMD echo "hi "$NAME", you have been succesful in containerising and running this
 6. now run the local image in a container hosted in a Linux VM hosted on your laptop, limiting the memeory and CPU. Don't forget to edit your name.
 
 ```
-docker container run --env NAME=my-name-here --name ubuntu-container --rm -m 200M  --cpus=0.25  node4demo/ubuntu-test:my-name-here
+docker container run --env NAME=my-name-here --name ubuntu --rm -m 200M  --cpus=0.25  node4demo/ubuntu-test:my-name-here
 ```
 
-#### if you receive error: The container name "/ubuntu-container" is already in use by container "0b2.. then run 
+#### if you receive error: The container name "/ubuntu" is already in use by container "0b2.. then run 
 
 ```
 docker ps 
 
-docker stop ubuntu-container
+docker stop ubuntu
 ```
 
 7. This time, run the local image again - in the background, as non root (admin) user, adding a networking capability, keeping it running. 

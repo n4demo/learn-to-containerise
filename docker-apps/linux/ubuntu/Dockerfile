@@ -1,3 +1,2 @@
 FROM ubuntu
-CMD echo "hi "$NAME", you have been succesful in containerising and running this simple Ubuntu application.\n" 
-
+CMD while sleep 1; do echo ":-) Hi " $NAME ". My name is: "$(hostname) ". I am a running container! The time is: " $(date); done
